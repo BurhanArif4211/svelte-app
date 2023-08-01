@@ -58,13 +58,15 @@
     height: 100vh;
   }
   .explore {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     color: #ccc;
     background-color: #cccccc00;
-    border-radius: 100px;
+    border-radius: min(20px,20vw);
     border: solid #cccccc;
-    padding: 10px;
-    
+    padding: 15px;
+    position: relative;
+    top: 1rem;
+    left: 0.5rem;
     cursor: pointer;
   }
   .explore:hover {

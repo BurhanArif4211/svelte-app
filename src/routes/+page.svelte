@@ -1,5 +1,6 @@
 <script>
-  import TopMenu from "./TopMenu.svelte";
+  import AnimeHeading from "./AnimeHeading.svelte";
+import TopMenu from "./TopMenu.svelte";
 </script>
 
 <head>
@@ -25,17 +26,17 @@
         </div>
       </div>
       <div class="info">
-        <div class="left"><div class="heading">Hi</div></div>
+        <div class="left"><div class="heading"> <AnimeHeading text="Hi"/></div></div>
         <div class="right">
-          <div class="iamburhan">iam.BurhanArif</div>
+          <a id="link" class="iamburhan jingle" href="https://instagram.com/iam.burhanarif" target="_blank">@iam.BurhanArif</a>
           <div class="decsription-right" />
         </div>
       </div>
       <div class="info">
         <div class="left">
-          <div class="heading">How May I Be Of Your Help?</div>
+          <div class="heading"><AnimeHeading text="How May I Be Of Your Help?"/></div>
         </div>
-        <div class="right">TODO: add contact form</div>
+        <div class="right"><AnimeHeading text="Contact | Email | Company Name " /></div>
       </div>
     </div>
   </body>
@@ -51,8 +52,9 @@
     box-sizing: border-box;
   }
   .info {
-    font-family: Helvetica, sans-serif;
+    font-family: lato, sans-serif;
     font-size: 3rem;
+    color: #ccc;
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -60,6 +62,7 @@
     background-color: #1e083b;
     border-radius: 3.5vw;
     padding: 2.5vw;
+    margin: auto;
   }
   .left{
     flex: 1;
@@ -70,18 +73,27 @@
   .right{
     flex: 1;
     padding: 20px;
+    font-size: 10vh;
     width: min(100vw, 70%);
     background-color: #1e083b00;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
   }
+  .heading{
+    font-weight: bolder;
+    font-size: 10vh;
+  }
+  .iamburhan{
+    all: unset;
+    font-size: 18vh;
+    font-size: clamp(2rem, 8vw, 10rem);
+    margin-top: 30%;
+  }
+  
   .document {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ccc;
     background-color: hsl(266, 76%, 10%);
     position: absolute;
-
     overflow-x: hidden;
   }
   p {
@@ -97,12 +109,11 @@
   .explore {
     font-size: 2vw;
     background-color: #cccccc00;
-    border-radius: 5rem;
     border: solid 3px #cccccc;
     padding: 0.5rem;
     position: relative;
-    top: 1rem;
-    left: 0.5rem;
+    top: min(2.5vh,5rem);
+    left: 0.5vw;
     cursor: pointer;
   }
   .explore:hover {

@@ -32,7 +32,7 @@ onMount(()=>{
   <ul>
     <li><a class="navigation__link" href="/">Home</a></li>
     <li><a class="navigation__link" href="/SelectionMenu">Sections</a></li>
-    <li><a class="navigation__link" href="/Contacts">Contact</a></li>
+    <li><a class="navigation__link" href="/en/Contacts">Contact</a></li>
 
   </ul>
 </div>

@@ -9,25 +9,36 @@
 </head>
 
 <main>
-<body>
-  <div class="document">
-    <div class="intro-wrapper">
-      <div class="login-button"><a href="/en/Login">Login</a></div>
-      <div class="container">
-        <div class="left-div">
-          <p>Quality Expiriences At your Fingertips.</p>
-          <button class="explore"><a href="/SelectionMenu">Explore!</a></button>
-        </div>
-        <div class="right-div">
-          <div class="circle" />
+  <body>
+    <div class="document">
+      <div class="intro-wrapper">
+        <div class="container">
+          <div class="left-div">
+            <p>Quality Expiriences At your Fingertips.</p>
+            <button class="explore"
+              ><a href="/SelectionMenu">Explore!</a></button
+            >
+          </div>
+          <div class="right-div">
+            <div class="circle" />
+          </div>
         </div>
       </div>
+      <div class="info">
+        <div class="left"><div class="heading">Hi</div></div>
+        <div class="right">
+          <div class="iamburhan">iam.BurhanArif</div>
+          <div class="decsription-right" />
+        </div>
+      </div>
+      <div class="info">
+        <div class="left">
+          <div class="heading">How May I Be Of Your Help?</div>
+        </div>
+        <div class="right">TODO: add contact form</div>
+      </div>
     </div>
-    <div class="info">
-      
-    </div>
-  </div>
-</body>
+  </body>
 </main>
 <TopMenu />
 
@@ -39,31 +50,56 @@
     padding: 0;
     box-sizing: border-box;
   }
-  .document{
+  .info {
+    font-family: Helvetica, sans-serif;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1e083b;
+    border-radius: 3.5vw;
+    padding: 2.5vw;
+  }
+  .left{
+    flex: 1;
+    padding: 30px;
+    background-color: #1e083b00;
+    width: min(100vw, 70%);
+  }
+  .right{
+    flex: 1;
+    padding: 20px;
+    width: min(100vw, 70%);
+    background-color: #1e083b00;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .document {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #ccc;
     background-color: hsl(266, 76%, 10%);
-   position: absolute;
-   width: 100vw;
-   height: 100vh;
+    position: absolute;
+
     overflow-x: hidden;
   }
   p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 3.5vw;
+    font-size: min(3.5vw , 5rem);
     color: #ccc;
   }
   .intro-wrapper {
     margin-top: 15vh;
-    width: 100vw;
+    margin-bottom: 15vh;
     height: 100vh;
   }
   .explore {
-    font-size: 2.5vw;
-    color: #ccc;
+    font-size: 2vw;
     background-color: #cccccc00;
-    border-radius: min(20px,20vw);
-    border: solid #cccccc;
-    padding: 15px;
+    border-radius: 5rem;
+    border: solid 3px #cccccc;
+    padding: 0.5rem;
     position: relative;
     top: 1rem;
     left: 0.5rem;
@@ -74,15 +110,17 @@
     color: #1e083b;
   }
   a {
-    color: #ccc;
     text-decoration: none;
+    color: #ccc;
+  }
+  a:hover {
+    color: #1e083b;
   }
   .container {
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
     width: min(700px, 70%);
-    background: rgb(0, 58, 138);
     background: linear-gradient(
       90deg,
       rgba(0, 58, 138, 1) 0%,
@@ -90,25 +128,9 @@
     );
     border-radius: 3vw;
     margin: auto;
-    @media (min-width: 1500px) {
+    @media (min-width: 775px) {
       width: min(1500px, 100%);
     }
-  }
-  .login-button {
-    position: fixed;
-    top: 20px; 
-    right: 0.5vw;
-    background: none;
-    color: #fff;
-    padding: 10px 20px;
-    border: solid #ccc;
-    border-radius: 100px;
-    cursor: pointer;
-    z-index: 1;
-  }
-  .login-button:hover {
-    background-color: #ccc;
-    color: #1e083b;
   }
   .left-div {
     flex: 1;
@@ -139,12 +161,4 @@
     );
   }
 
-  .info {
-
-    width: 100vw;
-    height: 100vh;
-    background-color: #1e083b;
-    border-radius: 3.5vw;
-    padding: 2.5vw;
-  }
 </style>

@@ -1,50 +1,21 @@
-<script>
-  import { onMount } from 'svelte';
-
+<script lang="ts">
   export let text = '';
-  let isVisible = false;
-  /**
-   * @param {HTMLElement} element
-   */
-  // Function to check if the element is in the viewport
-
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom >= 0;
-  }
-
-  // Function to handle the scroll event
-  function handleScroll() {
-    const element = document.getElementById('scroll-animate');
-    if (element) {
-      isVisible = isInViewport(element);
-    }
-  }
-
-  onMount(() => {
-    handleScroll(); // Initial check in case the element is already visible on mount
-    // Add the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      // Remove the scroll event listener on component unmount
-      window.removeEventListener('scroll', handleScroll);
-    };
-  });
+  import { fade } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
+  import { inview } from 'svelte-inview';
+  import { elasticOut } from 'svelte/easing';
+  let isInView;
 </script>
 
-<style>
-  .scroll-animate {
-    opacity: 0;
-    transform: translateY(300px) rotateZ(-50deg);
-    transition: opacity 1s, transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
 
-  .scroll-animate.visible {
-    opacity: 1;
-    transform: translateY(0) rotateZ(0deg);
-  }
-</style>
-
-<div class="scroll-animate" id="scroll-animate" class:visible={isVisible}>
-  <p>{text}</p>
+<div
+  class="wrapper"
+  use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+  on:change={({ detail }) => {
+    isInView = detail.inView;
+  }}
+>
+{#if isInView}
+  <p transition:fly={{ x: 200, duration: 1000,easing: elasticOut }} >{text}</p>
+{/if}
 </div>

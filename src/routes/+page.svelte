@@ -34,9 +34,9 @@ import TopMenu from "./TopMenu.svelte";
       </div>
       <div class="info">
         <div class="left">
-          <div class="heading"><AnimeHeading text="How May I Be Of Your Help?"/></div>
+          <div class="heading">How May I Be Of Your Help?</div>
         </div>
-        <div class="right"><AnimeHeading text="Contact | Email | Company Name " /></div>
+        <div class="right">Contact | Email | Company Name </div>
       </div>
     </div>
   </body>
@@ -60,7 +60,6 @@ import TopMenu from "./TopMenu.svelte";
     width: 100vw;
     height: 100vh;
     background-color: #1e083b;
-    border-radius: 3.5vw;
     padding: 2.5vw;
     margin: auto;
   }

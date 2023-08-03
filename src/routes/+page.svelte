@@ -1,6 +1,8 @@
 <script>
-  import AnimeHeading from "./AnimeHeading.svelte";
+import AnimeHeading from "./AnimeHeading.svelte";
 import TopMenu from "./TopMenu.svelte";
+
+
 </script>
 
 <head>
@@ -15,7 +17,7 @@ import TopMenu from "./TopMenu.svelte";
       <div class="intro-wrapper">
         <div class="container">
           <div class="left-div">
-            <p>Quality Expiriences At your Fingertips.</p>
+            <p>Graphic Design, Web Dev, Programming <br>Be Realistic. </p>
             <button class="explore"
               ><a href="/SelectionMenu">Explore!</a></button
             >
@@ -26,19 +28,22 @@ import TopMenu from "./TopMenu.svelte";
         </div>
       </div>
       <div class="info">
-        <div class="left"><div class="heading"> <AnimeHeading text="Hi"/></div></div>
+        <div class="left"><div class="heading"> <AnimeHeading text="Hi" xdirection="200"/></div></div>
         <div class="right">
-          <a id="link" class="iamburhan jingle" href="https://instagram.com/iam.burhanarif" target="_blank">@iam.BurhanArif</a>
+          <a id="link" class="iamburhan jingle" href="https://instagram.com/iam.burhanarif" target="_blank"></a>
           <div class="decsription-right" />
         </div>
       </div>
       <div class="info">
         <div class="left">
-          <div class="heading">How May I Be Of Your Help?</div>
+          <div class="heading"><AnimeHeading text="How May I Be Of Your Help?" xdirection="200"/></div>
         </div>
-        <div class="right">Contact | Email | Company Name </div>
+        <div class="right"><div class="contact"><AnimeHeading text="Contact | Email | Company Name " xdirection="-100"/></div></div>
       </div>
     </div>
+    <footer>
+      Built with love in SvelteKit
+    </footer>
   </body>
 </main>
 <TopMenu />
@@ -79,15 +84,24 @@ import TopMenu from "./TopMenu.svelte";
   }
   .heading{
     font-weight: bolder;
-    font-size: 10vh;
+    font-size: min(10vw,10vh);
   }
   .iamburhan{
     all: unset;
+    cursor: pointer;
     font-size: 18vh;
     font-size: clamp(2rem, 8vw, 10rem);
-    margin-top: 30%;
+    margin-top: 20%;
+    right: 10%;
+    transition: opacity 250ms ease;
+    position: absolute;
   }
-  
+.contact{
+  margin-top:5%;
+  position: absolute;
+  font-size: clamp(1rem, 8vw, 5rem);
+}
+
   .document {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ccc;
@@ -123,7 +137,7 @@ import TopMenu from "./TopMenu.svelte";
     text-decoration: none;
     color: #ccc;
   }
-  a:hover {
+ .explore a:hover {
     color: #1e083b;
   }
   .container {

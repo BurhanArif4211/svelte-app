@@ -1,18 +1,31 @@
+<main>
+  <div class="box-container">
+    <a href="/GraphicDesign" class="link-box">
+      <div class="inner-text">Graphic Design</div>
+    </a>
+    <a href="/Programming" class="link-box">
+      <div class="inner-text">Programming</div>
+    </a>
+  </div>
+</main>
+
 <style>
-    .box-container {
-    font-family:  Helvetica, sans-serif;
+  main{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  .box-container {
     color: rgb(255, 255, 255);
     display: flex;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-  
   }
-  
+
   .link-box {
     flex: 1;
-    background-size:cover;
-    background-position: left ;
+    background-size: cover;
+    background-position: left;
     transition: transform 0.3s;
     display: flex;
     align-items: center;
@@ -20,41 +33,42 @@
     color: white;
     text-decoration: none;
     z-index: 0;
+    transform: scale(1.1);
   }
 
-
-  .inner-text{
+  .inner-text {
     color: #ccc;
     font-size: 4vw;
     margin: auto;
-  }
-.inner-text:nth-child(1):hover {
-   color: transparent;
-  background-image: url('/src/lib/grapphicdesign.gif');
+    text-shadow: black 10vh;
 
-}
-  .link-box:hover {
-    transform: scale(1.1);
-    
   }
-  
+
+  .link-box:hover {
+    transform: scale(1.2);
+  }
+  .link-box:nth-child(1):hover .inner-text {
+    background-image: url("/src/lib/grapphicdesign.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    margin: auto;
+  }
+  .link-box:nth-child(2):hover .inner-text {
+    background-image: url("/src/lib/programming.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    margin: auto;
+  }
+
   .link-box:nth-child(1) {
     background-image: url(/src/lib/panel1.jpg);
   }
-
-  
   .link-box:nth-child(2) {
     background-image: url(/src/lib/panel3.jpg);
+    background-repeat: no-repeat;
   }
-  
 </style>
-<main>
-    <div class="box-container">
-        <a href="/GraphicDesign" class="link-box">
-            <div class="inner-text">Graphic Design</div>
-        </a>
-        <a href="/Programming" class="link-box">
-            <div class="inner-text">Programming</div>
-        </a>
-      </div>
-  </main>

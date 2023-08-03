@@ -1,6 +1,7 @@
 
 <script>
  import { onMount } from 'svelte';
+  import AnimeHeading from '../AnimeHeading.svelte';
 
 let isAnimating = false;
 
@@ -9,21 +10,11 @@ function toggleAnimation() {
   isAnimating = !isAnimating;
 }
 
-// You can also use onMount() to start the animation automatically when the component is mounted
-onMount(() => {
-  setTimeout(() => {
-    isAnimating = true;
-  }, 500); // Add a delay if you want the animation to start after a certain time
-});
-onMount(()=>{
-    setTimeout(() => {
-    isAnimating = false;
-  }, 1000);
-});
+
 
 </script>
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <div class="page">
 <div class="background"></div>
@@ -31,6 +22,10 @@ onMount(()=>{
   <span class="material-symbols-outlined toggleMenu" on:click={() => toggleAnimation()} >menu</span>
   <ul>
     <li><a class="navigation__link" href="/">Home</a></li>
+    <li><a class="navigation__link" href="/">Project 1</a></li>
+    <li><a class="navigation__link" href="/">Project 2</a></li>
+    <li><a class="navigation__link" href="/">Project 3</a></li>
+
     <li><a class="navigation__link" href="/SelectionMenu">Sections</a></li>
     <li><a class="navigation__link" href="/en/Contacts">Contact</a></li>
 
@@ -38,7 +33,7 @@ onMount(()=>{
 </div>
 <div class="content__container">
   <div class:animate="{isAnimating}" class="content content--home">
-    <div class="text">Hello</div>
+    <div class="text"><AnimeHeading text="Here, You will find my programmnig work from the past." xdirection="200"/></div>
   </div>
 </div>
 </div>
@@ -83,8 +78,8 @@ transition: transform 0.3s ease;
     transform: translateX(150px) translateZ(-200px) rotateY(-10deg);
     
   }
-.content--home .text {
-  font-size: 10vw;
+.text {
+  font-size: clamp(0.7rem, 8vw, 2rem);
   text-align: center;
   font-family: 'helvetica', sans-serif;
   color: white;

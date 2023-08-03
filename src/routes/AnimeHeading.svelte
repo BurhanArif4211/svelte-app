@@ -1,21 +1,21 @@
 <script lang="ts">
   export let text = '';
-  import { fade } from 'svelte/transition';
+  export let xdirection ='';
   import { fly } from 'svelte/transition';
   import { inview } from 'svelte-inview';
-  import { elasticOut } from 'svelte/easing';
+  import { backOut } from 'svelte/easing';
   let isInView;
 </script>
 
 
 <div
   class="wrapper"
-  use:inview={{ unobserveOnEnter: true, rootMargin: '-20%' }}
+  use:inview={{ unobserveOnEnter: true, rootMargin: '-30%' }}
   on:change={({ detail }) => {
     isInView = detail.inView;
   }}
 >
 {#if isInView}
-  <p transition:fly={{ x: 200, duration: 1000,easing: elasticOut }} >{text}</p>
+  <div transition:fly={{ x: xdirection, duration: 1000,easing: backOut }} >{text}</div>
 {/if}
 </div>

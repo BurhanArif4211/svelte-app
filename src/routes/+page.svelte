@@ -1,10 +1,10 @@
 <script>
-import AnimeHeading from "./AnimeHeading.svelte";
-import TopMenu from "./TopMenu.svelte";
-
-
+  import AnimeHeading from "./AnimeHeading.svelte";
+  import AnimePara from "./AnimePara.svelte";
+  import TopMenu from "./TopMenu.svelte";
+  
+  
 </script>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,9 +17,9 @@ import TopMenu from "./TopMenu.svelte";
       <div class="intro-wrapper">
         <div class="container">
           <div class="left-div">
-            <p>Graphic Design, Web Dev, Programming <br>Be Realistic. </p>
+            <AnimeHeading text="Graphic Design, Web Dev, Programming Be Realistic. " xdirection="300" xtweak="-5%"/>
             <button class="explore"
-              ><a href="/SelectionMenu">Explore!</a></button
+            ><a href="/SelectionMenu">Explore!</a></button
             >
           </div>
           <div class="right-div">
@@ -27,24 +27,24 @@ import TopMenu from "./TopMenu.svelte";
           </div>
         </div>
       </div>
-      <div class="info">
-        <div class="left"><div class="heading"> <AnimeHeading text="Hi" xdirection="200"/></div></div>
+      <div class="info"> 
+        <div class="left"><div class="heading"> <AnimeHeading text="Hi" xdirection="200" xtweak="-20%"/></div></div>
         <div class="right">
-          <a id="link" class="iamburhan jingle" href="https://instagram.com/iam.burhanarif" target="_blank"></a>
+          <a id="link" class="iamburhan jingle" href="https://instagram.com/iam.burhanarif" target="_blank"><img class="instalogo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg"><AnimePara text="@Iam.BurhanArif" ydirection="200"/></a>
           <div class="decsription-right" />
         </div>
       </div>
       <div class="info">
         <div class="left">
-          <div class="heading"><AnimeHeading text="How May I Be Of Your Help?" xdirection="200"/></div>
+          <div class="heading"><AnimeHeading text="How May I Be Of Your Help?" xdirection="200" xtweak="-20%"/></div>
         </div>
-        <div class="right"><div class="contact"><AnimeHeading text="Contact | Email | Company Name " xdirection="-100"/></div></div>
+        <div class="right"><div class="contact"><AnimeHeading text="Contact | Email | Company Name" xdirection="-100" xtweak="-20%"/></div></div>
       </div>
     </div>
-    <footer>
-      Built with love in SvelteKit
-    </footer>
   </body>
+  <footer>
+    Built with love in SvelteKit
+  </footer>
 </main>
 <TopMenu />
 
@@ -84,17 +84,24 @@ import TopMenu from "./TopMenu.svelte";
   }
   .heading{
     font-weight: bolder;
-    font-size: min(10vw,10vh);
+    font-size: clamp(2rem, 8vw, 10rem);
+    padding: 10%;
+  
   }
   .iamburhan{
     all: unset;
     cursor: pointer;
-    font-size: 18vh;
+
     font-size: clamp(2rem, 8vw, 10rem);
-    margin-top: 20%;
+    margin-top: 50%;
     right: 10%;
-    transition: opacity 250ms ease;
+  }
+  .instalogo{
+    aspect-ratio: 1/1;
+    width: clamp(1.4vw,220px,10vw);
     position: absolute;
+    margin-left:clamp(-13vw,500px,-10vw);
+
   }
 .contact{
   margin-top:5%;
@@ -108,6 +115,7 @@ import TopMenu from "./TopMenu.svelte";
     background-color: hsl(266, 76%, 10%);
     position: absolute;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -144,7 +152,7 @@ import TopMenu from "./TopMenu.svelte";
     display: flex;
     padding-left: 20px;
     padding-right: 20px;
-    width: min(700px, 70%);
+    width: min(1500px, 70%);
     background: linear-gradient(
       90deg,
       rgba(0, 58, 138, 1) 0%,
@@ -160,6 +168,8 @@ import TopMenu from "./TopMenu.svelte";
     flex: 1;
     padding: 30px;
     background-color: #1e083b00;
+    font-size: min(3.5vw , 5rem);
+    color: #ccc;
     width: min(100vw, 70%);
   }
 
@@ -174,8 +184,8 @@ import TopMenu from "./TopMenu.svelte";
   }
 
   .circle {
-    width: 30vw;
-    height: 30vw;
+    width:500px ;
+    height: 500px;
     border-radius: 50%;
     background: rgb(116, 87, 193);
     background: linear-gradient(

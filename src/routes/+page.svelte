@@ -1,11 +1,9 @@
 <script>
-import AnimeStaggerPara from "./AnimeStaggerPara.svelte";
-import AnimeHeading from "./AnimeXHeading.svelte";
-  import AnimePara from "./AnimeYHeading.svelte";
-  import TopMenu from "./TopMenu.svelte";
   import ContactForm from "./en/Contacts/ContactForm.svelte";
-  
-  
+  import TopMenu from "./TopMenu.svelte";
+  import AnimeStaggerPara from "./AnimeStaggerPara.svelte";
+  import AnimeHeading from "./AnimeXHeading.svelte";
+  import AnimePara from "./AnimeYHeading.svelte";
 </script>
 <head>
   <meta charset="UTF-8" />
@@ -20,7 +18,7 @@ import AnimeHeading from "./AnimeXHeading.svelte";
         <div class="container">
           <div class="left-div">
             <div class="header-text">
-            <AnimeStaggerPara text="Graphic Design | Web Dev | Programming | Be Realistic" ydistance="300" xtweak="-5%"/>
+            <AnimeStaggerPara text="Graphic | Design | Web Dev | Programming | Be Realistic" ydistance="200" xtweak="-5%"/>
             </div>
             <button class="explore">
               <a href="/SelectionMenu">Explore!</a>
@@ -34,15 +32,14 @@ import AnimeHeading from "./AnimeXHeading.svelte";
       <div class="info"> 
         <div class="left"><div class="heading"> <AnimeHeading text="Hi" xdirection="200" xtweak="-20%"/></div></div>
         <div class="right">
-          <a id="link" class="iamburhan jingle" href="https://instagram.com/iam.burhanarif" target="_blank"><img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg"><AnimePara text="@Iam.BurhanArif" ydirection="200"/></a>
-          <div class="decsription-right" />
-        </div>
+          <div class="iamburhan">
+          <img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg"><p class="placeholderheadertext">0</p><AnimePara text=" @Iam.BurhanArif" ydirection="200"/></div>
       </div>
       <div class="info">
         <div class="left">
           <div class="heading"><AnimeHeading text="How May I Be Of Your Help?" xdirection="200" xtweak="-20%"/></div>
         </div>
-        <div class="right"><div class="contact"><AnimeStaggerPara text="Contact Me | Any Time | Anywhere | Email"/><ContactForm /></div></div>
+        <div class="right"><div class="contact heading"><AnimeStaggerPara text="Contact | With | Email"/><ContactForm /></div></div>
       </div>
     </div>
   </body>
@@ -71,19 +68,50 @@ import AnimeHeading from "./AnimeXHeading.svelte";
     padding: 2.5vw;
     margin: auto;
   }
+  @media(min-width: 775px){
+    .info{
+      flex-direction: column;
+
+    }
+ 
+
+  }
+
+  @media(max-width: 775px){
+    /* for mobile */
+    .info{
+      flex-direction: column;
+
+    }
+    .right > .contact{
+      flex-direction: column;
+      margin-left: 10vw;
+      overflow: hidden;
+    }
+.circle{
+  display: none;
+}
+.iamburhan{
+  display: flex;
+  padding: 30px;
+  font-size: clamp(1rem, 8vw, 5rem);
+}  
+.instalogo{
+aspect-ratio: 1/1;
+    width: clamp(1rem, 5rem, 10rem) ;
+    margin-left:clamp(6vw,500px,-10vw);}
+}
   .left{
-    flex: 1;
     padding: 30px;
     background-color: #1e083b00;
     width: min(100vw, 70%);
   }
   .right{
-    flex: 1;
     padding: 20px;
     font-size: 10vh;
     width: min(100vw, 70%);
-    background-color: #1e083b00;
     display: flex;
+    flex-direction: row;
   }
   .heading{
     font-weight: bolder;
@@ -102,24 +130,24 @@ import AnimeHeading from "./AnimeXHeading.svelte";
 
   }
   .header-text{
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: clamp(1rem, 8vw, 5rem);
 
   }
   .placeholderheadertext{
     color: transparent;
+    font-size: small;
   }
 
   .explore {
-    font-size: 2vw;
+    font-size: clamp(0.5rem, 5vw, 2.5rem);
     background-color: #cccccc00;
     border-radius: 5rem;
     border: solid 3px #cccccc;
-    padding: 0.5rem;
+    padding: 0.8rem;
     position: relative;
     top: 1rem;
     left: 0.5rem;
-    top: min(2.5vh,5rem);
-    left: 0.5vw;
+bottom:1vh ;    left: 0.5vw;
     cursor: pointer;
   }
   .explore:hover {
@@ -178,18 +206,10 @@ import AnimeHeading from "./AnimeXHeading.svelte";
       rgba(0, 58, 138, 1) 91%
     );
   }
-  .iamburhan{
-    all: unset;
-    cursor: pointer;
-
-    font-size: clamp(2rem, 8vw, 10rem);
-    margin-top: 50%;
-    right: 10%;
-  }
+ 
   .instalogo{
     aspect-ratio: 1/1;
-    width: clamp(1.4vw,220px,10vw);
-    position: absolute;
+    width: clamp(1rem, 8vw, 10rem) ;
     margin-left:clamp(-13vw,500px,-10vw);
 
   }

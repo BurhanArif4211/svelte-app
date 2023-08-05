@@ -34,7 +34,7 @@
   background-color: transparent;
   background-size: cover;
   position: relative;
-  padding-top: 1vh;
+  padding: 2rem;
   padding-bottom: 150px;
   background-attachment: fixed;
   z-index: 0;
@@ -48,9 +48,8 @@
 .contact .container .text-contact {
   width: 600px;
   text-align: center;
-  margin: 0 auto;
-  color: #e2e2e2;
-  margin-bottom: 50px;
+  color: #ccc;
+  margin-bottom: 1rem;
   font-size: clamp(0.8rem, 1vw, 3rem);
  
 }
@@ -141,9 +140,9 @@
   transition: 0.3s;
 }
 .contact .container form .right input {
-  width: 100%;
+  width: 90%;
   height: 45px;
-  border: none;
+  border: solid white 1px;
   padding: 10px;
   background-color: var(--main-color);
   color: #fff;
@@ -153,6 +152,7 @@
   border-radius: 10px;
   opacity: 0.8;
   transition: 0.5s ease-in-out;
+
 }
 .contact .container form .right input:hover {
   opacity: 1;

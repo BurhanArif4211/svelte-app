@@ -20,7 +20,7 @@
 </style>
 <div class="animatedLines">
     <div
-    class="wrapper"
+    class="wrapper" 
     use:inview={{ unobserveOnEnter: true, rootMargin: xtweak }}
     on:change={({ detail }) => {
       isInView = detail.inView;

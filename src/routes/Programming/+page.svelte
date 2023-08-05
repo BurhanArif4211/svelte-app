@@ -1,7 +1,7 @@
 
 <script>
  import { onMount } from 'svelte';
-  import AnimeHeading from '../AnimeHeading.svelte';
+  import AnimeHeading from '../AnimeXHeading.svelte';
 
 let isAnimating = false;
 

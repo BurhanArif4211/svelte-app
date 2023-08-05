@@ -1,7 +1,7 @@
 <script lang="ts">
   export let text = '';
   export let xdirection ='';
-  export let xtweak = "%15";
+  export  let xtweak = '15%';
 
   import { fly } from 'svelte/transition';
   import { inview } from 'svelte-inview';

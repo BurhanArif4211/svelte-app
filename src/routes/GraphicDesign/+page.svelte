@@ -1,7 +1,8 @@
 
 <script>
  import { onMount } from 'svelte';
-  import AnimeHeading from '../AnimeHeading.svelte';
+  import AnimeHeading from '../AnimeXHeading.svelte';
+  import ImgFrame from '../ImgFrame.svelte';
 
 
 let isAnimating = false;
@@ -34,7 +35,23 @@ function toggleAnimation() {
 <body>
 <div class="page">
 <div class="background"></div>
+
+<div class="content__container">
+  <div class:animate="{isAnimating}" class="content content--home">
+    <div class="innerContent">
+    <div class="header"><AnimeHeading text="Here, You will find All my Graphic Design Work in the past." xdirection="200" xtweak="5%"/></div>
+    <div class="scrolldown"><span class="material-symbols-outlined scr">expand_more</span>Check It Out<span class="material-symbols-outlined scr">expand_more</span></div>
+  </div>
+  <div class:animate="{isAnimating}" class="content content--home">
+    <div class="innerContent">
+    <div class="frame_container"><ImgFrame URL="/src/lib/Thumb1Before.jpg"/></div>
+    </div>
+  </div>
+</div>
+</div>
 <div class="navigation">
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <span class="material-symbols-outlined toggleMenu" on:click={() => toggleAnimation()} >menu</span>
   <ul>
     <li><a class="navigation__link" href="/">Home</a></li>
@@ -46,18 +63,9 @@ function toggleAnimation() {
 
   </ul>
 </div>
-<div class="content__container">
-  <div class:animate="{isAnimating}" class="content content--home">
-    <div class="innerContent">
-    <div class="header"><AnimeHeading text="Here, You will find All my Graphic Design Work in the past." xdirection="200" xtweak="5%"/></div>
-    <div class="scrolldown"><span class="material-symbols-outlined scr">expand_more</span>Check It Out<span class="material-symbols-outlined scr">expand_more</span></div>
-    <img class="firstframe" alt="madick" src="/src/lib/grapphicdesign.gif">
-  </div>
-  </div>
-</div>
 </body>
 <style>
-    
+
 body {
   color: #FFF;
   background-color:black;
@@ -65,11 +73,13 @@ body {
   font-size: clamp(48px, 4vw, 100px);
   overflow-x: hidden;
   background-image: url('https://st.depositphotos.com/1005844/57600/i/450/depositphotos_576004278-stock-photo-illustration-tileable-stars-night-sky.jpg');
+
 }
 
   .navigation {
     top: 0;
     left: 0;
+
   }
 
   .toggleMenu{
@@ -91,7 +101,7 @@ body {
     display: block;
 
     top: 60px;
-    position: relative;
+    position: fixed;
     font-size: 5vw;
   }
 
@@ -126,7 +136,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  pointer-events: none;
+  z-index: 1;
+
 }
 .content {
   position: relative;
@@ -141,7 +152,6 @@ body {
   border-radius: 10px;
   /* display: flex;
   flex-direction: column; */
- 
   transform: translateX(0px) translateZ(0px);
   transition: transform 0.3s ease;
   
@@ -152,6 +162,7 @@ body {
     }
     .innerContent{
      margin: 6rem;
+
     }
 
 /* scrollable contant */
@@ -163,20 +174,16 @@ body {
         font-family: 'helvetica', sans-serif;
         color: white;
       }
-        
-    .scrolldown{
-        
-        
-      }
+
     .scr{
         position: relative;
       font-size: larger;
       }
-      .firstframe{
-        position: absolute;
-    
-     left:6rem;
-      }
+    .frame_container{
+      aspect-ratio: 16/9;
+      width: 50%;
+      justify-content: right;
+    }
 
 
     /* :root {

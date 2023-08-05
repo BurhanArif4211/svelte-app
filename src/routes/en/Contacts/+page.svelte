@@ -1,17 +1,32 @@
 <script>
-  import ContactForm from "./ContactForm.svelte";
+  import AnimeXHeading from "../../AnimeXHeading.svelte";
+import ContactForm from "./ContactForm.svelte";
 
 </script>
-<h1 class="header">Contacts</h1>
+<body>
+<h1 class="header"><AnimeXHeading text="Contact" xdirection="-200"/></h1>
 <ContactForm/>
+</body>
 <style>
-    *{
-        font-family: Helvetica, sans-serif;
-        color: #ccc;
+      *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Helvetica, sans-serif;
+    color: #ccc;
+  }
+
+    body{
+        height: 100vh;
+        border-radius: 1vh;
+        background-color: #1e083b;
+        padding: 4vh;
     }
     .header{
-        padding: 5rem;
-        font-size: clamp(1rem, 8vw, 3rem);
+        margin-top: 3.5vh;
+        font-size: clamp(2rem, 8vw, 5rem);
         
     }
 </style>

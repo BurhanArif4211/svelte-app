@@ -1,5 +1,8 @@
 <!-- NAV-BAR -->
 <script>
+  import { auth } from '$lib/firebase';
+  import { signOut } from 'firebase/auth';
+  import { authUser } from '$lib/authStore';
   let menuSlideDown = false;
 let linksIn =false;
   // Function to toggle the animation state when the toggleMenu is clicked
@@ -7,6 +10,15 @@ let linksIn =false;
     menuSlideDown = !menuSlideDown;
     linksIn = !linksIn;
   }
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        $authUser = undefined;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 </script>
 
 <head>
@@ -22,7 +34,7 @@ let linksIn =false;
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <nav on:click={()=>toggleSlide()} class="horizantal-menu-bar" class:toggleMenuShow={menuSlideDown} class:linksFadeIn={linksIn} >
-  <li><div class="login-button"><a href="/en/Login">Login</a></div></li>
+  <li>{#if $authUser!==undefined}<div class="login-button"><a on:click={handleLogout} href="/en/Login">LogOut</a></div>{:else}<div class="login-button"><a href="/en/Login">login</a></div>{/if}</li>
   <li><a href="/">HOME</a></li>
   <li><a href="/SelectionMenu">SECTIONS</a></li>
   <li><a href="/en/About">ABOUT</a></li>

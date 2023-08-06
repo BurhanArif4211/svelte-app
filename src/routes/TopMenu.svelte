@@ -34,7 +34,7 @@ let linksIn =false;
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <nav on:click={()=>toggleSlide()} class="horizantal-menu-bar" class:toggleMenuShow={menuSlideDown} class:linksFadeIn={linksIn} >
-  <li>{#if $authUser!==undefined}<div class="login-button"><a on:click={handleLogout} href="/en/Login">LogOut</a></div>{:else}<div class="login-button"><a href="/en/Login">login</a></div>{/if}</li>
+  <li>{#if $authUser==undefined}<div class="login-button"><a href="/en/Login">Login</a></div>{:else}<div class="login-button"><a on:click={handleLogout} href="/en/Login">LogOut</a></div>{/if}</li>
   <li><a href="/">HOME</a></li>
   <li><a href="/SelectionMenu">SECTIONS</a></li>
   <li><a href="/en/About">ABOUT</a></li>

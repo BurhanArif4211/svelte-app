@@ -2,24 +2,41 @@
 <!-- src/routes/Login.svelte -->
 <script>
 // @ts-nocheck
-
 import { registerWithEmail, signInWithGoogle } from "$lib/firebase";
-    
-    let email = '';
-    let password = '';
+let email = '';
+    let userName = '';
+    let password2 = '';
+    let password1 = '';
+
+function createNewUser(){
+
+  if (password1==password2 ||userName.length<12){
+   registerWithEmail(userName,email,password1)
+}else{
+  console.log('invalid password')
+}
+}
     </script>
     <main class="container">
         <h1 class="title">Register</h1>
-        <form method="POST" class="main">
+        <form method="get" on:submit={createNewUser} class="main">
           <label class="field">
-            Email:
-            <input bind:value={email} type="email" class="input" />
+            Enter User Name:
+            <input autocomplete="username" bind:value={userName} type="username" class="input" />
           </label>
           <label class="field">
-            Password:
-            <input bind:value={password} type="password" class="input" />
+            Enter Valid Email:
+            <input autocomplete="email" bind:value={email} type="username" class="input" />
           </label>
-          <button on:click={registerWithEmail(email,password)} class="login-button" type="submit">Register</button>
+          <label class="field">
+            Enter Password:
+            <input name="password" autocomplete="current-password" required bind:value={password1} type="password" class="input" />
+          </label>
+          <label class="field">
+            Re-Enter Password:
+            <input name="password" autocomplete="current-password" required  bind:value={password2} type="password" class="input" />
+          </label>
+          <button on:click={console.log('submit')} class="login-button" type="submit">Register</button>
         </form>
         <button on:click={signInWithGoogle} class="google-button" >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
@@ -69,6 +86,8 @@ import { registerWithEmail, signInWithGoogle } from "$lib/firebase";
         }
       
         .input {
+          color: #ccc;
+      
           padding: 0.5rem;
           border: 1px solid #ccc;
           border-radius: 1.3vw;

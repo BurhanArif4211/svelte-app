@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"email-validator": "^2.0.4",
 		"firebase": "^10.1.0",
 		"firebase-tools": "^12.4.7",
 		"svelte-inview": "^4.0.1"

@@ -75,9 +75,23 @@ export async function signInWithEmail(email, password) {
   }
 }
 
-export async function registerWithEmail(email, password) {
+export async function registerWithEmail(userName,email, password) {
   try {
-    await createUserWithEmailAndPassword(auth, email, password);
+    await createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      goto('/en/Profile');
+      authUser.set({
+       displayName:userName||'N/A',
+       uid: userCredential.user.uid,
+       email: userCredential.user.email||'N/A',
+       profileIMG:'N/A',
+       
+     });
+     
+       console.log(`user is logged-in`)
+     }
+
+    )
   } catch (error) {
     console.error('Error registering with email', error);
   }

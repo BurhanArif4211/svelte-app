@@ -1,9 +1,6 @@
 
 <!-- src/routes/Login.svelte -->
 <script>
-
-
-
 import { signInWithEmail, signInWithGoogle } from "$lib/firebase";
 
 let email = '';
@@ -20,14 +17,14 @@ function signInWithGoogleL(){
 </script>
 <main class="container">
     <h1 class="title">Login</h1>
-    <form method="POST" class="main">
+    <form method="GET" action="" class="main">
       <label class="field">
         Email:
-        <input bind:value={email} type="email" class="input" />
+        <input autocomplete="email" bind:value={email} type="email" class="input" />
       </label>
       <label class="field">
         Password:
-        <input bind:value={password} type="password" class="input" />
+        <input name="password" autocomplete="current-password" required  bind:value={password} type="password" class="input" />
       </label>
       <button on:click={handleEmailSignIn} class="login-button" type="submit">Login</button>
       
@@ -74,14 +71,16 @@ function signInWithGoogleL(){
     }
   
     .field {
+    
       display: flex;
       flex-direction: column;
       margin-bottom: 0.5rem;
       font-size: 1rem;
-      color: #ccc;
     }
   
     .input {
+      color: #ccc;
+
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 1.3vw;

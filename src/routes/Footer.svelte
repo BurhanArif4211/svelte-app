@@ -49,7 +49,7 @@ li{
     <div class="links-cont">
       <ul>
       {#each socialMediaLinks as link ,i(i)}
-       <li class="links"><a target="_blank" href="{link.url}"><AnimeYHeading text="{link.name}" ydirection="400" xtweak="-5%" delay="{300*i}"/></a></li>
+       <li class="links"><a target="_blank" href="{link.url}"><AnimeYHeading text="{link.name}" ydirection="400" xtweak="-3%" delay="{300*i}"/></a></li>
       {/each}
     </ul>
   </div>

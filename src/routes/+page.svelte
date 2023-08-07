@@ -8,6 +8,7 @@
   import ContactForm from "./en/Contacts/ContactForm.svelte";
   import Footer from "./Footer.svelte";
   import Separate from "./Separate.svelte";
+  import AnimeStaggerYPara from "./AnimeStaggerYPara.svelte";
 
 </script>
 
@@ -34,12 +35,17 @@
       <Separate/>
       <div class="info1">
         <div class="c1">
-          <div class="heading"><AnimeXHeading text="Hi" xdirection="200" /> </div>
+          <div class="heading"><AnimeXHeading text="Hi" xdirection="200" xtweak="15%"/> </div>
         </div>
-        <div class="c1"><img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg" />
-            <div class="handle"><AnimeStaggerXPara text=" @|I|a|m|.|B|u|r|h|a|n|A|r|i|f" xdistance="200" xtweak="20%" delay="100" />
+        <div class="c1">
+          <img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg" />
+          <div class="handle"><AnimeStaggerXPara text=" @|I|a|m|.|B|u|r|h|a|n|A|r|i|f" xdistance="200" xtweak="20%" delay="100" /></div>
+          <div>Trying to be:
+            <div class="tyingtobe">
+             <AnimeStaggerYPara text="Muslim | Sucessful | Optimistic" ydistance="300" xtweak="-3%" delay="-300"/>
+          </div>
+          </div>
         </div>
-      </div>
     </div>
     <div class= "info2">
       <div class="c2">
@@ -47,7 +53,7 @@
       </div>
       <div class="c2">
         <div class="discription contact">
-          <AnimeStaggerPara text="Contact | With | Email" /> <div class="contact"><ContactForm /></div>
+          <AnimeStaggerPara text="Contact | With | Email" /> <div class="contact form"><ContactForm /></div>
         </div>
       </div>
     </div>
@@ -65,6 +71,7 @@
     box-sizing: border-box;
   }
   .info1  {
+    padding-top: 5.1vh;
   position: relative;
   font-family: lato, sans-serif;
   font-size: clamp(1rem, 4vw, 8rem);
@@ -74,13 +81,21 @@
     height:100vh;
 }
   .info2{
+    z-index: 0;
+    padding-top: 5.1vh;
+  position: relative;
+  font-family: lato, sans-serif;
+  font-size: clamp(1rem, 4vw, 8rem);
+  color: #ccc;
+  width: 100vw;
+  background-color: #1e083b;
     height:100vh;
 
   }
 .c1 {
   padding: 3.3vh;
   position: relative;
-display:flex;
+
 @media (min-width:775px) {
    display: flex;}
   flex-direction:row;
@@ -104,27 +119,33 @@ display:flex;
      padding: 50px;
    right: 100px;
   }
+  padding: 1rem;
   font-weight: light;
   font-size: clamp(3rem, 6vw, 9rem);
   }
   .handle{
     z-index: 1;
+  font-size: clamp(3rem, 6vw, 9rem);
+
   }
 .instalogo{
   position: absolute;
-  z-index: 0;
+  z-index: 1;
 top: 0;
-left: 0;
+left: -10;
 aspect-ratio: 1/1;
-width: 110vw;
+width: clamp(100vw,110vw,300vw);
 opacity: 0.3;
 }
 
   .contact{
-
     @media (min-width:1030px) {
-   display: flex;}
+   display: flex;
+  flex: 1;}
   }
+
+
+  /*form                 */
   .document {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ccc;
@@ -169,7 +190,7 @@ opacity: 0.3;
   }
   .container {
     display: flex;
-    height: 75vh;
+    height: 50vh;
     width: min(700px, 70%);
     background: linear-gradient(
       90deg,

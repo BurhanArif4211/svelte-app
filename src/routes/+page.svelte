@@ -169,6 +169,7 @@ opacity: 0.3;
   }
   .container {
     display: flex;
+    height: 75vh;
     width: min(700px, 70%);
     background: linear-gradient(
       90deg,
@@ -201,12 +202,15 @@ opacity: 0.3;
     aspect-ratio: 1/1;
     height: 40vw;
     border-radius: 50%;
-    background: rgb(116, 87, 193);
     background: linear-gradient(
       90deg,
       rgba(116, 87, 193, 1) 0%,
       rgba(0, 58, 138, 1) 91%
     );
+  @media (max-width:775px) {
+display: none;  
+opacity: 0;  
+  }
   }
 
   </style>

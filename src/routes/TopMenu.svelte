@@ -49,7 +49,6 @@ let linksIn =false;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
   }
   .horizantal-menu-bar {
     font-family: lato, sans-serif;

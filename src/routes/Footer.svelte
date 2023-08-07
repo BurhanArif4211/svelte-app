@@ -4,12 +4,12 @@
 import AnimeYHeading from "./AnimeYHeading.svelte";
 
     let socialMediaLinks = [
-      { name: 'Fiverr', url: 'https://www.fiverr.com/burhanarif276' },
-      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/burhan-arif-b41914237/' },
-      {name: 'CodePen',url:'https://codepen.io/Recon-Master'},
-      { name: 'Instagram', url: 'https://www.instagram.com/iam.burhanarif' },
-      {name:'About',url:'/en/About'},
-      {name:'Contact',url:'/en/Contact'}
+      { name: 'Fiverr  ', url: 'https://www.fiverr.com/burhanarif276' },
+      { name: 'LinkedIn  ', url: 'https://www.linkedin.com/in/burhan-arif-b41914237/' },
+      {name: 'CodePen  ',url:'https://codepen.io/Recon-Master'},
+      { name: 'Instagram  ', url: 'https://www.instagram.com/iam.burhanarif' },
+      {name:'About  ',url:'/en/About'},
+      {name:'Contact  ',url:'/en/Contact'}
     ];
   </script>
   <style>
@@ -17,11 +17,12 @@ import AnimeYHeading from "./AnimeYHeading.svelte";
   background: linear-gradient(90deg, rgba(0, 58, 138, 1) 0%, rgba(116, 87, 193, 1) 100%);
   padding: 5vw;
   color: #ccc;
-  font-size: clamp(0.5rem, 4vw, 6rem);
+  font-size: clamp(0.5rem, 3vw, 5rem);
   overflow: hidden;
 }
 a{
   all: unset;
+
 
 }
 .links-cont{
@@ -32,7 +33,7 @@ justify-content: center;
 .links{
   cursor: pointer;
   flex-direction: row;
-  padding: 7px;
+  padding: 6px;
   flex: 5%;
   padding: 10px;
 }

@@ -35,7 +35,6 @@
   background-size: cover;
   position: relative;
   padding: 2rem;
-  padding-bottom: 150px;
   background-attachment: fixed;
   z-index: 0;
 }

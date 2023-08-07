@@ -9,15 +9,13 @@ function handleEmailSignIn() {
   signInWithEmail(email, password);
 }
 function signInWithGoogleL(){
-  // grecaptcha.enterprise.ready(async () => {
-  //   const token = await grecaptcha.enterprise.execute('6LcCW4UnAAAAANpXKE-454x87NkkzyhBEV4mvsum', {action: 'LOGIN'});
- let userData= signInWithGoogle();
+  signInWithGoogle();
 }
 
 </script>
 <main class="container">
     <h1 class="title">Login</h1>
-    <form method="GET" action="" class="main">
+    <form method="Post" action="" class="main">
       <label class="field">
         Email:
         <input autocomplete="email" bind:value={email} type="email" class="input" />

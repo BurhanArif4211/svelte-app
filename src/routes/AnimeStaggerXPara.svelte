@@ -2,20 +2,22 @@
   import { inview } from 'svelte-inview';
 
     import { fly } from 'svelte/transition';
-    import { onMount } from 'svelte';
   import {backInOut} from "svelte/easing"
   
     export let text = "";
     export let xtweak = "15%";
-    export let ydistance = '200';
+    export let xdistance = "200";
     export let delay = "300";
-    let lines = text.split(' | ');
+    let lines = text.split('|');
     let isInView = false;
 
 </script>
 <style>
+  .wrapper{
+    z-index:1
+  }
   p{
-    line-height: 20px; 
+    display:flex;
   }
 </style>
 <div class="animatedLines">
@@ -28,13 +30,8 @@
     >
 {#each lines as line, i (i)}
     {#if isInView}
-        <p transition:fly={{ delay: i * delay ,duration:2000, y: ydistance,easing:backInOut}}>{line}</p>
+        <span transition:fly={{ delay: i * delay ,duration:2000, x: xdistance,easing:backInOut}}>{line}</span>
     {/if}
     {/each}
 </div>
 </div>
-
-
-
-
-

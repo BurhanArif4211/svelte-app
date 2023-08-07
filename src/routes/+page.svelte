@@ -1,15 +1,16 @@
 <script>
-  import ContactForm from "./en/Contacts/ContactForm.svelte";
   import TopMenu from "./TopMenu.svelte";
-  import AnimeStaggerPara from "./AnimeStaggerPara.svelte";
-  import AnimeHeading from "./AnimeXHeading.svelte";
-  import AnimePara from "./AnimeYHeading.svelte";
+  
+  import AnimeStaggerPara from "./AnimeStaggerYPara.svelte";
+  import AnimeStaggerXPara from "./AnimeStaggerXPara.svelte";
+  import AnimeXHeading from "./AnimeXHeading.svelte";
+
+  import ContactForm from "./en/Contacts/ContactForm.svelte";
+  import Footer from "./Footer.svelte";
+  import Separate from "./Separate.svelte";
+
 </script>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buthan Arif | Home</title>
-</head>
+
 
 <main>
   <body>
@@ -18,7 +19,7 @@
         <div class="container">
           <div class="left-div">
             <div class="header-text">
-            <AnimeStaggerPara text="Graphic | Design | Web Dev | Programming | Be Realistic" ydistance="200" xtweak="-5%"/>
+              <AnimeStaggerPara text="Graphic | Design | Web Dev | Programming | Be Realistic" ydistance="200" xtweak="-5%"/>
             </div>
             <button class="explore">
               <a href="/SelectionMenu">Explore!</a>
@@ -29,23 +30,29 @@
           </div>
         </div>
       </div>
-      <div class="info"> 
-        <div class="left"><div class="heading"> <AnimeHeading text="Hi" xdirection="200" xtweak="-20%"/></div></div>
-        <div class="right">
-          <div class="iamburhan">
-          <img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg"><p class="placeholderheadertext">0</p><AnimePara text=" @Iam.BurhanArif" ydirection="200"/></div>
-      </div>
-      <div class="info">
-        <div class="left">
-          <div class="heading"><AnimeHeading text="How May I Be Of Your Help?" xdirection="200" xtweak="-20%"/></div>
+      
+      <Separate/>
+      <div class="info1">
+        <div class="c1">
+          <div class="heading"><AnimeXHeading text="Hi" xdirection="200" /> </div>
         </div>
-        <div class="right"><div class="contact heading"><AnimeStaggerPara text="Contact | With | Email"/><ContactForm /></div></div>
+        <div class="c1"><img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg" />
+            <div class="handle"><AnimeStaggerXPara text=" @|I|a|m|.|B|u|r|h|a|n|A|r|i|f" xdistance="200" xtweak="20%" delay="100" />
+        </div>
       </div>
     </div>
-  </body>
-  <footer>
-    Built with love in Karachi, Pakistan
-  </footer>
+    <div class= "info2">
+      <div class="c2">
+        <div class="heading"><AnimeStaggerXPara text="How | May | I | Be | Of | Your | Help?" xdistance="300"  xtweak="20%"/></div>
+      </div>
+      <div class="c2">
+        <div class="discription contact">
+          <AnimeStaggerPara text="Contact | With | Email" /> <div class="contact"><ContactForm /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer/>
 </main>
 <TopMenu />
 
@@ -57,85 +64,79 @@
     padding: 0;
     box-sizing: border-box;
   }
-  .info {
-    font-family: lato, sans-serif;
-    font-size: 3rem;
-    color: #ccc;
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    background-color: #1e083b;
-    padding: 2.5vw;
-    margin: auto;
-  }
-  @media(min-width: 775px){
-    .info{
-      flex-direction: column;
-
-    }
- 
-
-  }
-
-  @media(max-width: 775px){
-    /* for mobile */
-    .info{
-      flex-direction: column;
-
-    }
-    .right > .contact{
-      flex-direction: column;
-      margin-left: 10vw;
-      overflow: hidden;
-    }
-.circle{
-  display: none;
+  .info1  {
+  position: relative;
+  font-family: lato, sans-serif;
+  font-size: clamp(1rem, 4vw, 8rem);
+  color: #ccc;
+  width: 100vw;
+  background-color: #1e083b;
+    height:100vh;
 }
-.iamburhan{
-  display: flex;
-  padding: 30px;
-  font-size: clamp(1rem, 8vw, 5rem);
-}  
+  .info2{
+    height:100vh;
+
+  }
+.c1 {
+  padding: 3.3vh;
+  position: relative;
+display:flex;
+@media (min-width:775px) {
+   display: flex;}
+  flex-direction:row;
+  font-size: clamp(1rem, 4vw, 8rem);
+  margin-left: 3.4vh;
+}
+.c2{
+  padding: 3.3vh;
+  display:flex;
+  @media (max-width:775px) {
+    flex-direction:row ;
+  }
+}
+.heading {
+  font-weight: bolder;
+  font-size: clamp(2rem, 8vw, 10rem);
+}
+  .discription{
+    @media (min-width:775px) {
+     position: absolute;
+     padding: 50px;
+   right: 100px;
+  }
+  font-weight: light;
+  font-size: clamp(3rem, 6vw, 9rem);
+  }
+  .handle{
+    z-index: 1;
+  }
 .instalogo{
+  position: absolute;
+  z-index: 0;
+top: 0;
+left: 0;
 aspect-ratio: 1/1;
-    width: clamp(1rem, 5rem, 10rem) ;
-    margin-left:clamp(6vw,500px,-10vw);}
+width: 110vw;
+opacity: 0.3;
 }
-  .left{
-    padding: 30px;
-    background-color: #1e083b00;
-    width: min(100vw, 70%);
-  }
-  .right{
-    padding: 20px;
-    font-size: 10vh;
-    width: min(100vw, 70%);
-    display: flex;
-    flex-direction: row;
-  }
-  .heading{
-    font-weight: bolder;
-    font-size: clamp(2rem, 8vw, 10rem);
-    padding: 10%;
-  
-  }
 
+  .contact{
+
+    @media (min-width:1030px) {
+   display: flex;}
+  }
   .document {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #ccc;
-    background-color: hsl(266, 76%, 10%);
-    position: absolute;
-    overflow-x: hidden;
+    background-color:#1e083b ;
+    position: relative;
+    overflow: hidden;
     width: 100%;
 
   }
   .header-text{
     font-size: clamp(1rem, 8vw, 5rem);
 
-  }
-  .placeholderheadertext{
-    color: transparent;
-    font-size: small;
   }
 
   .explore {
@@ -147,7 +148,8 @@ aspect-ratio: 1/1;
     position: relative;
     top: 1rem;
     left: 0.5rem;
-bottom:1vh ;    left: 0.5vw;
+    bottom:1vh ;    
+    left: 0.5vw;
     cursor: pointer;
   }
   .explore:hover {
@@ -155,16 +157,18 @@ bottom:1vh ;    left: 0.5vw;
     color: #1e083b;
   }
   a {
-    text-decoration: none;
+    all:unset;
     color: #ccc;
   }
   a:hover {
     color: #1e083b;
   }
+  .intro-wrapper{
+    height:85vh;
+    width:100vw;
+  }
   .container {
     display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
     width: min(700px, 70%);
     background: linear-gradient(
       90deg,
@@ -173,7 +177,7 @@ bottom:1vh ;    left: 0.5vw;
     );
     border-radius: 3vw;
     margin: auto;
-    margin-top: 15vh;
+    margin-top: 10.444vh;
     @media (min-width: 775px) {
       width: min(1500px, 100%);
     }
@@ -182,9 +186,7 @@ bottom:1vh ;    left: 0.5vw;
     flex: 1;
     padding: 30px;
     font-size: clamp(1rem, 8vw, 6rem);
-
     background-color: #1e083b00;
-    
   }
   .right-div {
     flex: 1;
@@ -196,8 +198,8 @@ bottom:1vh ;    left: 0.5vw;
     align-items: center;
   }
   .circle {
-    width: 30vw;
-    height: 30vw;
+    aspect-ratio: 1/1;
+    height: 40vw;
     border-radius: 50%;
     background: rgb(116, 87, 193);
     background: linear-gradient(
@@ -206,18 +208,6 @@ bottom:1vh ;    left: 0.5vw;
       rgba(0, 58, 138, 1) 91%
     );
   }
- 
-  .instalogo{
-    aspect-ratio: 1/1;
-    width: clamp(1rem, 8vw, 10rem) ;
-    margin-left:clamp(-13vw,500px,-10vw);
 
-  }
-.contact{
-  margin-top:5%;
-  position: absolute;
-  font-size: clamp(1rem, 8vw, 5rem);
-  display: flex;
-  flex-direction: row;
-}
-</style>
+  </style>
+                                     

@@ -9,6 +9,7 @@
   import Footer from "./Footer.svelte";
   import Separate from "./Separate.svelte";
   import AnimeStaggerYPara from "./AnimeStaggerYPara.svelte";
+  import AnimeAlternaor from "./AnimeAlternaor.svelte";
 
 </script>
 
@@ -39,10 +40,10 @@
         </div>
         <div class="c1">
           <img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg" />
-          <div class="handle"><AnimeStaggerXPara text=" @|I|a|m|.|B|u|r|h|a|n|A|r|i|f" xdistance="200" xtweak="20%" delay="100" /></div>
-          <div>Trying to be:
-            <div class="tyingtobe">
-             <AnimeStaggerYPara text="Muslim | Sucessful | Optimistic" ydistance="300" xtweak="-3%" delay="-300"/>
+          <div class="heading handle"><AnimeStaggerXPara text=" @|I|a|m|.|B|u|r|h|a|n|A|r|i|f" xdistance="200" xtweak="15%" delay="100" /></div>
+          <div class="tryingtobe">Trying to a be:
+            <div class="discription tryingtobe">
+             <AnimeAlternaor text=" | GraphicDesigner | WebDeveloper | Programmer" />
           </div>
           </div>
         </div>
@@ -53,7 +54,7 @@
       </div>
       <div class="c2">
         <div class="discription contact">
-          <AnimeStaggerPara text="Contact | With | Email" /> <div class="contact form"><ContactForm /></div>
+          <!-- <AnimeStaggerPara text="Contact | With | Email"  xtweak="-20%"/> --><div class="contact form"><ContactForm /></div> 
         </div>
       </div>
     </div>
@@ -71,7 +72,6 @@
     box-sizing: border-box;
   }
   .info1  {
-    padding-top: 5.1vh;
   position: relative;
   font-family: lato, sans-serif;
   font-size: clamp(1rem, 4vw, 8rem);
@@ -103,6 +103,7 @@
   margin-left: 3.4vh;
 }
 .c2{
+  
   padding: 3.3vh;
   display:flex;
   @media (max-width:775px) {
@@ -116,18 +117,31 @@
   .discription{
     @media (min-width:775px) {
      position: absolute;
+     font-size: clamp(3rem, 6vw, 9rem);
      padding: 50px;
-   right: 100px;
+     top: 250px;
   }
-  padding: 1rem;
-  font-weight: light;
-  font-size: clamp(3rem, 6vw, 9rem);
+  font-weight: bold;
+  @media (max-width:775px) {
+    padding: -1.7rem;
+  font-size: clamp(3rem, 3.3vw, 8rem);}
+
   }
   .handle{
     z-index: 1;
-  font-size: clamp(3rem, 6vw, 9rem);
+  font-size: clamp(2rem, 4vw, 10rem);
 
   }
+  .tryingtobe{
+    @media (min-width:775px) {
+  top: 6vw;
+left: 30vw;
+    }
+  position: absolute;
+
+  left: 4.33vw;
+z-index: 1;  
+}
 .instalogo{
   position: absolute;
   z-index: 1;
@@ -156,22 +170,30 @@ opacity: 0.3;
 
   }
   .header-text{
-    font-size: clamp(1rem, 8vw, 5rem);
+    font-size: clamp(2rem, 5vw, 5rem);
+    @media (max-width: 775px) {
+      font-size: clamp(1rem, 3.16vh, 3rem);
+    }
 
   }
 
   .explore {
-    font-size: clamp(0.5rem, 5vw, 2.5rem);
+    font-size: clamp(1rem, 1.2vw, 2.5rem);
     background-color: #cccccc00;
     border-radius: 5rem;
     border: solid 3px #cccccc;
-    padding: 0.8rem;
-    position: relative;
-    top: 1rem;
-    left: 0.5rem;
-    bottom:1vh ;    
-    left: 0.5vw;
+    padding: 0.5rem;
     cursor: pointer;
+    position: relative;
+    @media (min-width: 775px) {
+
+    top: 40vh;}
+    @media (max-width: 775px) {
+      position: absolute;    
+      bottom: 40px;
+      font-size: clamp(1.8rem, 2.1vh, 3rem);
+    }
+  
   }
   .explore:hover {
     background-color: #ccc;
@@ -185,8 +207,12 @@ opacity: 0.3;
     color: #1e083b;
   }
   .intro-wrapper{
-    height:85vh;
+    padding: 10px;
+    height:100vh;
     width:100vw;
+    /* @media (min-width: 775px) {
+
+    } */
   }
   .container {
     display: flex;
@@ -203,12 +229,23 @@ opacity: 0.3;
     @media (min-width: 775px) {
       width: min(1500px, 100%);
     }
+    @media (max-width: 775px) {
+     height: min(50vh,44%);
+    }
+
   }
   .left-div {
-    flex: 1;
+    position:relative;
+    height: 45vh;
     padding: 30px;
-    font-size: clamp(1rem, 8vw, 6rem);
+    bottom: 10px;
     background-color: #1e083b00;
+    @media (max-width: 775px) {
+      z-index: 0;
+      margin-top: 20px;
+    padding: 40px;
+    }
+  z-index: 2;
   }
   .right-div {
     flex: 1;
@@ -221,17 +258,28 @@ opacity: 0.3;
   }
   .circle {
     aspect-ratio: 1/1;
-    height: 40vw;
+    width: 25vh;
+    z-index: 1;
     border-radius: 50%;
     background: linear-gradient(
       90deg,
       rgba(116, 87, 193, 1) 0%,
       rgba(0, 58, 138, 1) 91%
     );
+    animation: breath 6s ease-in-out infinite;
+    @media (min-width: 775px) {
+    width: 55vh;
+
+    }
   @media (max-width:775px) {
 display: none;  
 opacity: 0;  
   }
+  }
+  @keyframes breath{
+    0%, 50%, 100% { transform: scale(1, 1); }
+  30%, 80% { transform: scale(0.92, 0.95); }
+    
   }
 
   </style>

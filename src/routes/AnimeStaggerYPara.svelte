@@ -17,6 +17,10 @@
   p{
     line-height: 15px; 
   }
+.animatedLines{
+  position: absolute;
+  top: 5px;
+}
 </style>
 <div class="animatedLines">
     <div

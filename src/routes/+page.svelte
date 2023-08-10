@@ -1,14 +1,13 @@
 <script>
   import TopMenu from "./TopMenu.svelte";
   
-  import AnimeStaggerPara from "./AnimeStaggerYPara.svelte";
+  import AnimeStaggerYPara from "./AnimeStaggerYPara.svelte";
   import AnimeStaggerXPara from "./AnimeStaggerXPara.svelte";
   import AnimeXHeading from "./AnimeXHeading.svelte";
 
   import ContactForm from "./en/Contacts/ContactForm.svelte";
   import Footer from "./Footer.svelte";
   import Separate from "./Separate.svelte";
-  import AnimeStaggerYPara from "./AnimeStaggerYPara.svelte";
   import AnimeAlternaor from "./AnimeAlternaor.svelte";
 
 </script>
@@ -21,11 +20,11 @@
         <div class="container">
           <div class="left-div">
             <div class="header-text">
-              <AnimeStaggerPara text="Graphic | Design | Web Dev | Programming | Be Realistic" ydistance="200" xtweak="-5%"/>
+              <AnimeStaggerYPara text="Graphic | Design | Web Dev | Programming | Be Realistic" ydistance="200" xtweak="5%" delay="100"/>
+              <button class="explore">
+                <a href="/SelectionMenu">Explore!</a>
+              </button>
             </div>
-            <button class="explore">
-              <a href="/SelectionMenu">Explore!</a>
-            </button>
           </div>
           <div class="right-div">
             <div class="circle" />
@@ -36,21 +35,20 @@
       <Separate/>
       <div class="info1">
         <div class="c1">
-          <div class="heading"><AnimeXHeading text="Hi" xdirection="200" xtweak="15%"/> </div>
+          <div class="heading"><AnimeXHeading text="Hi" xdirection="200" xtweak="25%"/> </div>
         </div>
         <div class="c1">
           <img class="instalogo" alt="instagram logo" src="https://img.freepik.com/free-icon/instagram_318-183413.jpg" />
           <div class="heading handle"><AnimeStaggerXPara text=" @|I|a|m|.|B|u|r|h|a|n|A|r|i|f" xdistance="200" xtweak="15%" delay="100" /></div>
-          <div class="tryingtobe">Trying to a be:
+        
             <div class="discription tryingtobe">
              <AnimeAlternaor text=" | GraphicDesigner | WebDeveloper | Programmer" />
-          </div>
           </div>
         </div>
     </div>
     <div class= "info2">
       <div class="c2">
-        <div class="heading"><AnimeStaggerXPara text="How | May | I | Be | Of | Your | Help?" xdistance="300"  xtweak="20%"/></div>
+        <div class="heading"><AnimeStaggerXPara text="How | May | I | Be | Of | Your | Help?" xdistance="300"  xtweak="35%" delay="150"/></div>
       </div>
       <div class="c2">
         <div class="discription contact">
@@ -171,27 +169,32 @@ opacity: 0.3;
   }
   .header-text{
     font-size: clamp(2rem, 5vw, 5rem);
-    @media (max-width: 775px) {
-      font-size: clamp(1rem, 3.16vh, 3rem);
+    @media (max-height: 1040px) {
+      font-size: clamp(2rem, 6vh, 5rem);
     }
-
+    @media (max-width: 775px) {
+      font-size: clamp(2rem, 4vw, 5rem);
+    }
   }
 
   .explore {
-    font-size: clamp(1rem, 1.2vw, 2.5rem);
-    background-color: #cccccc00;
-    border-radius: 5rem;
-    border: solid 3px #cccccc;
-    padding: 0.5rem;
+    position: absolute;
+    
+    background: none;
+    color: #fff;
+    border: solid #ccc;
+    padding: 5px 10px;
+    border-radius: 100px;
     cursor: pointer;
-    position: relative;
+    
+    font-size: clamp(2.16vw, 2vh, 3rem);
     @media (min-width: 775px) {
-
-    top: 40vh;}
+    left: 60px;
+    bottom: -10px;}
     @media (max-width: 775px) {
-      position: absolute;    
-      bottom: 40px;
-      font-size: clamp(1.8rem, 2.1vh, 3rem);
+      padding: 10px 10px;
+      bottom: 45px;
+
     }
   
   }
@@ -207,14 +210,11 @@ opacity: 0.3;
     color: #1e083b;
   }
   .intro-wrapper{
-    padding: 10px;
-    height:100vh;
+    height:95vh;
     width:100vw;
-    /* @media (min-width: 775px) {
-
-    } */
   }
   .container {
+    position: relative;
     display: flex;
     height: 50vh;
     width: min(700px, 70%);
@@ -225,12 +225,15 @@ opacity: 0.3;
     );
     border-radius: 3vw;
     margin: auto;
-    margin-top: 10.444vh;
+    margin-top: max(10.444vh,10vw);
+    padding: 3.16vh 0;
+    @media (max-width: 775px) {
+     padding: 0;
+      height: min(50vh,44%);
+    };
     @media (min-width: 775px) {
       width: min(1500px, 100%);
-    }
-    @media (max-width: 775px) {
-     height: min(50vh,44%);
+
     }
 
   }

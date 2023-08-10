@@ -33,15 +33,20 @@ let linksIn =false;
 >
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<nav on:click={()=>toggleSlide()} class="horizantal-menu-bar" class:toggleMenuShow={menuSlideDown} class:linksFadeIn={linksIn} >
-  <li>{#if $authUser==undefined}<div class="login-button"><a href="/en/Login">Login</a></div>{:else}<div class="login-button"><a on:click={handleLogout} href="/en/Login">LogOut</a></div>{/if}</li>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div on:click={()=>toggleSlide()} class="horizantal-menu-bar" class:toggleMenuShow={menuSlideDown} class:linksFadeIn={linksIn}>
+{#if $authUser==undefined}<div class="login-button"><a href="/en/Login">Login</a></div>{:else}<div class="login-button"><a on:click={handleLogout} href="/en/Login">LogOut</a></div>{/if}
+<nav >
+  <ul>
   <li><a href="/">HOME</a></li>
   <li><a href="/SelectionMenu">SECTIONS</a></li>
   <li><a href="/en/About">ABOUT</a></li>
   <li><a href="/en/Contacts">CONTACTS</a></li>
   <li><a href="/en/Profile">PROFILE</a></li>
+</ul>
 </nav>
 
+</div>
 <style>
   *,
   *::before,
@@ -49,19 +54,17 @@ let linksIn =false;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    z-index: 3;
   }
   .horizantal-menu-bar {
     font-family: lato, sans-serif;
-    font-size: 1.7vw;
+    font-size: clamp(2rem, 2.16vw, 4.5rem);
     font-weight: bold;
     position: fixed;
-    display: flex;
     top: 0;
     left: 0;
     width: 100vw ;
     height: 80px;
-    z-index: 0;
+    z-index: 2;
     text-decoration: none;
     background: rgb(0, 58, 138);
     background: linear-gradient(
@@ -74,18 +77,21 @@ let linksIn =false;
       transition: transform 1s ease;
     }
   }
+  ul{
+    display: flex;
+    flex-direction: row;
+  }
   .login-button {
     position: fixed;
-    top: 4rem;
-    right: 2rem;
+    top: 1.50vh;
     background: none;
     color: #fff;
-    padding: 10px 20px;
+    font-size: clamp(16px, 2.16vw, 40px);
+    padding: 10px 10px;
     border: solid #ccc;
     border-radius: 100px;
     cursor: pointer;
-    z-index: 1;
-    font-size: 24px;
+    z-index: 3;
   }
   .login-button:hover {
     background-color: #ccc;
@@ -96,6 +102,7 @@ let linksIn =false;
     padding: 15px;
     cursor: pointer;
     font-size: 1.7vw;
+
   }
   a {
     color: #ccc;
@@ -113,9 +120,12 @@ let linksIn =false;
       display: none;
     }
     .login-button {
+      right: 3rem;
       top: 0.8rem;
       padding: 10px;
       size: 15px;
+    font-size: min(25px, 4.16vh);
+
     }
   }
   @media (max-width: 775px) {
@@ -126,16 +136,25 @@ let linksIn =false;
       height: 100vh;
      
     }
+    ul{
+      margin-top: 10.16vh;
+      flex-direction: column;
+    }
     li {
-      margin-top: 1.5vh;
       padding: 5px;
       font-size: 10vw;
-      margin: auto;
-      margin-top: -15px;
+      margin-top: 3.5vh;
+    }
+    li a{
+     display: block;
+     text-align: center;
     }
     .login-button{
-      padding: 0.5rem;
-      font-size: 24px;
+      position: absolute;
+      margin: 80px 50%;
+    font-size: clamp(20px, 3.16vw, 40px);
+      transform: translate(-50%,-50%);
+      top: max(65vh,30vw);
     }
     .toggleMenu{
       position: relative;
@@ -147,7 +166,7 @@ let linksIn =false;
     font-size: 30px;
     user-select: none;
     opacity: 0.8;
-    z-index: 2;
+    z-index: 4;
 
     }
   }

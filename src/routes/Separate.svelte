@@ -5,8 +5,10 @@
 <style>
     .or-spacer {
   margin: auto;
-  width: 400px;
+  width: clamp(100px,40vw,500px);
   position: relative;
+  transition: all 1s ease-in-out;
+  animation: stretch 2s infinite;
 }
 .or-spacer .mask {
   overflow: hidden;
@@ -19,8 +21,15 @@
   width: 100%;
   height: 25px;
   border-radius: 125px / 12px;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 0 0 10px #ccc;
 }
-
+@keyframes stretch{
+  0% , 100%{
+width: 40%;
+  }
+  50%{
+width: 50%;
+  }
+}
 
 </style>

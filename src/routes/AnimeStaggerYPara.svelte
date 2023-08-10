@@ -19,8 +19,11 @@
   }
 .animatedLines{
   position: absolute;
+  display: flex;
   top: 5px;
+  padding: 1.16vw;
 }
+
 </style>
 <div class="animatedLines">
     <div
@@ -32,7 +35,7 @@
     >
 {#each lines as line, i (i)}
     {#if isInView}
-        <p transition:fly={{ delay: i * delay ,duration:2000, y: ydistance,easing:backInOut}}>{line}</p>
+        <div class="paras" transition:fly={{ delay: i * delay ,duration:2000, y: ydistance,easing:backInOut}}>{line}</div>
     {/if}
     {/each}
 </div>

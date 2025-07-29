@@ -45,6 +45,7 @@
 
   .tablet:hover {
     background-color: #d0d0d0;
+    color: black;
     transform: translateY(-1px);
   }
 

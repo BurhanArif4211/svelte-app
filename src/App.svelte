@@ -110,7 +110,6 @@
 
 <main class="bg-[#260138]">
   <Navigga />
-  <div class="h-[84px]"></div>
   {#if $currentPage === 'home'}
   <Index />
   {:else if $currentPage === 'WhatIDo'}

@@ -121,7 +121,7 @@
                             <div
                                 class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#4f008497] to-transparent p-4"
                             >
-                                <h3 class="text-xl font-bold">
+                                <h3 class="text-xl font-bold text-shadow-lg text-shadow-[#3333335b]">
                                     {project.title}
                                 </h3>
                                 <div class="flex items-center mt-1">

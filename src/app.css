@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@font-face {
+    font-family: 'Fira Code';
+    src: url('/fonts/FiraCode-Regular.ttf') format('truetype'),
+         url('/fonts/FiraCode-Bold.ttf') format('truetype'),
+         url('/fonts/FiraCode-SemiBold.ttf') format('truetype'),
+         url('/fonts/FiraCode-Light.ttf') format('truetype'),
+         url('/fonts/FiraCode-Medium.ttf') format('truetype')
+         ;
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+    font-family: 'Fira Code', Arial, Helvetica, sans-serif;
+    background: rgb(16, 15, 18);
+    color: #f6deff;
+}
+::selection {
+    background-color: #0dff92; /* Highlight color */
+    color: #101010; /* Text color */
+}
+::-webkit-scrollbar {
+    width: 10px; /* Adjust width */
+}
+
+::-webkit-scrollbar-track {
+    background: #26002f83; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6f009e; /* Thumb color */
+    box-shadow: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9900ff; /* Thumb color on hover */
+}
+.g-NavBar{
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}

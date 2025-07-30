@@ -1,0 +1,16 @@
+{
+    "categories": ["Literature","Technology", "Society" ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "دوست، اردو مختسر خاکہ",
+        "slug": "character-sketch-dost",
+        "excerpt": "A Sketch i wrote a few years ago. I don't know how i got the idea.",
+        "category": "Literature",
+        "date": "2023-07-30",
+        "thumbnail": "/img/Dost-thumb.jpg",
+        "readTime": "3 min",
+        "tags": ["Postmodernism", "Fiction", "Philosophy"]
+      }
+    ]
+  }

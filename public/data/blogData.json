@@ -1,6 +1,17 @@
 {
-    "categories": ["Literature","Technology", "Society" ],
+    "categories": ["Literature", "Society","Technology"],
     "posts": [
+      {
+        "id": 2,
+        "title": "State Of Life 2025",
+        "slug": "state-of-life-2025",
+        "excerpt": "testing will edit later",
+        "category": "Society",
+        "date": "2023-08-01",
+        "thumbnail": "/img/blogThumbs/SOL2025.jpg",
+        "readTime": "5 min",
+        "tags": ["Life", "People", "Pakistan"]
+      },
       {
         "id": 1,
         "title": "دوست، اردو مختسر خاکہ",
@@ -8,7 +19,7 @@
         "excerpt": "A Sketch i wrote a few years ago. I don't know how i got the idea.",
         "category": "Literature",
         "date": "2023-07-30",
-        "thumbnail": "/img/Dost-thumb.jpg",
+        "thumbnail": "/img/blogThumbs/Dost-thumb.jpg",
         "readTime": "3 min",
         "tags": ["Postmodernism", "Fiction", "Philosophy"]
       }

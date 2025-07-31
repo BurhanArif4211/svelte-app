@@ -1,134 +1,49 @@
 <script>
     // @ts-nocheck
+    import { onMount } from "svelte";
+    import { router } from "./router/router.js";
+
+    import { projectsStore } from "./stores/projects.js";
+
     import Navigga from "./parts/Navigga.svelte";
     import Index from "./pages/index/Index.svelte";
     import Feeter from "./parts/Feeter.svelte";
     import WhatIDo from "./pages/WhatIDo/WhatIDo.svelte";
     import BlogPage from "./pages/blog/BlogPage.svelte";
-    import { currentPage } from "./stores/navState.js";
-    import { currentlyViewing } from "./stores/blogState.js";
     import BlogPostView from "./pages/blog/BlogPostView.svelte";
 
-    const projects = [
-        {
-            id: "pp-1",
-            title: "Travel Partner",
-            type: "web",
-            description:
-                "A utility app for people to share rides and increase society's efficiency.",
-            images: [
-                {
-                    url: "img/App Dev/travelPartner/login.png",
-                    caption: "login Page",
-                    aspectRatio: "landscape",
-                },
-                {
-                    url: "img/App Dev/travelPartner/Dashboard-addRoute.png",
-                    caption: "add a route on the dashboard",
-                    aspectRatio: "landscape",
-                },
-                {
-                    url: "img/App Dev/travelPartner/Dashboard.png",
-                    caption: "dashboard of the app",
-                    aspectRatio: "landscape",
-                },
-                {
-                    url: "img/App Dev/travelPartner/Dashboard-connect.png",
-                    caption: "connection requests on the home page",
-                    aspectRatio: "landscape",
-                },
-                {
-                    url: "img/App Dev/travelPartner/Dashboard-connected.png",
-                    caption: "connected view on the dashboard",
-                    aspectRatio: "landscape",
-                },
-            ],
-            technologies: ["Java", "Javalin", "SQLite", "JWT", "HTMX", "Web"],
-            links: {
-                github: "https://github.com/burhanarif4211/TravelPartner.git",
-                // playStore: 'https://play.google.com/store/apps/details?id=com.example.weather'
-            },
-        },
-        {
-            id: "project-2",
-            title: "Home Chef AI",
-            type: "mobile",
-            description: "AI Powered culinery app to allow easy cooking.",
-            images: [
-                {
-                    url: "img/App Dev/HomeChef/welcomeScreen.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/Architecture_diagram.png",
-                    caption: "",
-                    aspectRatio: "landscape",
-                },
-                {
-                    url: "img/App Dev/HomeChef/dashboard.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/aiSugestion.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/aiSuggestion-input.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/aiSuggestion-output.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/groceryList.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/DefaultRecipeList.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-                {
-                    url: "img/App Dev/HomeChef/suggestionList.png",
-                    caption: "",
-                    aspectRatio: "portrait",
-                },
-            ],
-            technologies: [
-                "Express",
-                "Node.js",
-                "React",
-                "Firebase",
-                "Cordova",
-            ],
-            links: {
-                github: "https://github.com/BurhanArif4211/HomeChefAI-MobileApp",
-                // liveDemo: 'https://ecom-demo.example.com'
-            },
-        },
-    ];
+    // subscribe to { page, params }
+    let page, params;
+    router.subscribe((r) => {
+        page = r.page;
+        params = r.params;
+    });
 </script>
 
 <main class="bg-[#260138]">
     <Navigga />
-    {#if $currentlyViewing === null}
-        {#if $currentPage === "home"}
-            <Index />
-        {:else if $currentPage === "WhatIDo"}
-            <WhatIDo {projects}></WhatIDo>
-        {:else if $currentPage === "Blog"}
-            <BlogPage></BlogPage>
+    {#if page === "home"}
+        <Index />
+    {:else if page === "whatido"}
+        {#if $projectsStore === null}
+            <div class="flex items-center justify-center h-[100vh]">
+                <div class="">Loading...</div>
+            </div>
+        {:else}
+            <WhatIDo projects={$projectsStore} />
         {/if}
-        {:else if typeof $currentlyViewing === "number"}
-        
-        <BlogPostView id={$currentlyViewing}></BlogPostView>
+    {:else if page === "blog"}
+        <BlogPage />
+    {:else if page === "design"}
+        <div class="h-[100vh] flex justify-center items-center">
+            <div class="text-3xl text-green-300">Under Construction</div>
+        </div>
+    {:else if page === "post"}
+        <BlogPostView parameter={!Number(params.parameter) ? params.parameter : Number(params.parameter)} />
+    {:else}
+        <div class="h-[100vh] flex justify-center items-center">
+            <div class="text-red-300 text-2xl">Not Found</div>
+        </div>
     {/if}
-        <Feeter />
+    <Feeter />
 </main>

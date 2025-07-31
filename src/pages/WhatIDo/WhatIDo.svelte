@@ -25,11 +25,12 @@
     // Props
     export let projects: Project[] = [];
     let selectedProject: Project | null = null;
-
+    let filteredProj = projects;
     // Filter projects by type
-    let filter: "all" | "web" | "android" = "all";
-    const filteredProjects = () => {
+    let filterState: "all" | "web" | "android" = "all";
+    const filteredProjects = (filter: string) => {
         if (filter === "all") return projects;
+
         return projects.filter((p) => p.type === filter);
     };
 
@@ -59,11 +60,6 @@
     <div class="max-w-7xl mx-auto">
         <!-- Header -->
         <div class="text-center mb-16">
-            <h1
-                class="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent"
-            >
-                Projects Gallery
-            </h1>
             <p class="text-xl  max-w-3xl mx-auto">
                 Showcase of Projects I have made throughout the years
             </p>
@@ -72,20 +68,29 @@
         <!-- Filters -->
         <div style="" class="filters-tablets flex justify-center mb-10 space-x-4 overflow-x-auto w-full">
             <button
-                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ml-[10rem] ${filter === "all" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
-                onclick={() => (filter = "all")}
+                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ml-[10rem] ${filterState === "all" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
+                onclick={() => {
+                    filteredProj=filteredProjects("all");
+                    filterState="all";
+                    }}
             >
                 All Projects
             </button>
             <button
-                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${filter === "web" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
-                onclick={() => (filter = "web")}
+                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${filterState === "web" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
+                onclick={() => {
+                    filteredProj=filteredProjects("web");
+                    filterState="web";
+                    }}
             >
                 Web Apps
             </button>
             <button
-                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${filter === "android" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
-                onclick={() => (filter = "android")}
+                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${filterState === "android" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
+                onclick={() => {
+                    filteredProj=filteredProjects("android");
+                    filterState="android";
+                    }}
             >
                 Android Apps
             </button>
@@ -93,7 +98,7 @@
 
         <!-- Project Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {#each filteredProjects() as project (project.id)}
+            {#each filteredProj as project (project.id)}
                 <!-- svelte-ignore a11y_click_events_have_key_events -->
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div
@@ -151,7 +156,7 @@
         </div>
 
         <!-- Empty State -->
-        {#if filteredProjects().length === 0}
+        {#if filteredProj.length === 0}
             <div class="text-center py-20">
                 <div class="text-6xl mb-4">📂</div>
                 <h3 class="text-2xl font-bold mb-2">No projects found</h3>
@@ -302,14 +307,6 @@
                             Technologies Used
                         </h3>
                         <Tabletdisplay DisplayTextOnly={true} items={selectedProject.technologies}></Tabletdisplay>
-                        <!-- <div class="flex flex-wrap gap-2">
-                            {#each selectedProject.technologies as tech}
-                                <span
-                                    class="px-3 py-1.5 rounded-full text-sm"
-                                    >{tech}</span
-                                >
-                            {/each}
-                        </div> -->
                     </div>
 
                     <!-- Screenshots Gallery -->

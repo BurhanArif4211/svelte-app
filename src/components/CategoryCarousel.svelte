@@ -26,11 +26,11 @@
         scrollPosition = carousel.scrollLeft;
     });
 </script>
-
+{#if posts.length}
 <div class="mb-16">
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-3xl font-bold ">{title}</h2>
-        {#if posts.length >2}
+        {#if posts.length >1}
         <div class="flex space-x-3">
             <button 
                 onclick={scrollLeft}
@@ -66,7 +66,7 @@
         {/each}
     </div>
 </div>
-
+{/if}
 <style>
     .scrollbar-hide::-webkit-scrollbar {
         display: none;

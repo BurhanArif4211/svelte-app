@@ -1,6 +1,8 @@
 <script lang="ts">
     import { currentlyViewing } from "../stores/blogState";
     import Tabletdisplay from "./Tabletdisplay.svelte";
+    import {router} from './../router/router'
+    const { navigate } = router;
 
     export let post: {
         id: number;
@@ -18,7 +20,7 @@
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <article
 onclick={()=>{
-    currentlyViewing.set(post.id)
+    navigate(`blog/${post.id}`)
 }}
 class="bg-gradient-to-tr from-[#460058] to-[#1b003d] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
     <div class="relative h-48 overflow-hidden">

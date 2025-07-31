@@ -30,7 +30,7 @@
 
 <!-- Hero Section -->
 <div
-  class="bg-[url('/img/hero-pattren.jpg')] h-[100vh] bg-repeat bg-[length:500px] p-10 md:p-[12rem] flex justify-center items-center flex-col"
+  class="bg-[url('/img/hero-pattren.webp')] h-[100vh] bg-repeat bg-[length:500px] p-10 md:p-[12rem] flex justify-center items-center flex-col"
 >
   <div class="hero backdrop-blur-md rounded-2xl p-6 md:p-8">
     <div class="headline mb-6">
@@ -61,9 +61,9 @@
         <Slider
           fit={true}
           items={[
-            "/img/Design/Poster_Winner.jpg",
-            "/img/Design/PakistanPoster2022.jpg",
-            "/img/blogThumbs/Dost-thumb.jpg",
+            "/img/Design/Poster_Winner.webp",
+            "/img/Design/PakistanPoster2022.webp",
+            "/img/blogThumbs/Dost-thumb.webp",
           ]}
         />
       </div>
@@ -102,7 +102,7 @@
     <div class="flex flex-col space-y-4">
       <span>Literature</span>
       <div class="">
-        <Slider items={["/img/blogThumbs/Dost-thumb.jpg"]} />
+        <Slider items={["/img/blogThumbs/Dost-thumb.webp"]} />
       </div>
       <Button onclick={() => navigate('blog')} variant="primary">
         Read Blog &rarr;
@@ -116,7 +116,7 @@
         <Slider
           items={[
             "/img/App Dev/HomeChef/logo1.png",
-            "/img/App Dev/travelPartner/logo1.jpg",
+            "/img/App Dev/travelPartner/logo1.webp",
           ]}
         />
       </div>
@@ -131,9 +131,9 @@
       <div class="">
         <Slider
           items={[
-            "img/Design/playingCard.jpg",
-            "img/Design/fearless_gun_thumb.jpg",
-            "img/Design/electric_gun_thumb.jpg",
+            "img/Design/playingCard.webp",
+            "img/Design/fearless_gun_thumb.webp",
+            "img/Design/electric_gun_thumb.webp",
           ]}
         />
       </div>

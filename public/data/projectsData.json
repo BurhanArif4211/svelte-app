@@ -7,27 +7,27 @@
             "A utility app for people to share rides and increase society's efficiency.",
         "images": [
             {
-                "url": "img/App Dev/travelPartner/login.png",
+                "url": "img/App Dev/travelPartner/login.webp",
                 "caption": "login Page",
                 "aspectRatio": "landscape"
             },
             {
-                "url": "img/App Dev/travelPartner/Dashboard-addRoute.png",
+                "url": "img/App Dev/travelPartner/Dashboard-addRoute.webp",
                 "caption": "add a route on the dashboard",
                 "aspectRatio": "landscape"
             },
             {
-                "url": "img/App Dev/travelPartner/Dashboard.png",
+                "url": "img/App Dev/travelPartner/Dashboard.webp",
                 "caption": "dashboard of the app",
                 "aspectRatio": "landscape"
             },
             {
-                "url": "img/App Dev/travelPartner/Dashboard-connect.png",
+                "url": "img/App Dev/travelPartner/Dashboard-connect.webp",
                 "caption": "connection requests on the home page",
                 "aspectRatio": "landscape"
             },
             {
-                "url": "img/App Dev/travelPartner/Dashboard-connected.png",
+                "url": "img/App Dev/travelPartner/Dashboard-connected.webp",
                 "caption": "connected view on the dashboard",
                 "aspectRatio": "landscape"
             }
@@ -51,47 +51,47 @@
         "description": "AI Powered culinery app to allow easy cooking.",
         "images": [
             {
-                "url": "img/App Dev/HomeChef/welcomeScreen.png",
+                "url": "img/App Dev/HomeChef/welcomeScreen.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/Architecture_diagram.png",
+                "url": "img/App Dev/HomeChef/Architecture_diagram.webp",
                 "caption": "",
                 "aspectRatio": "landscape"
             },
             {
-                "url": "img/App Dev/HomeChef/dashboard.png",
+                "url": "img/App Dev/HomeChef/dashboard.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/aiSugestion.png",
+                "url": "img/App Dev/HomeChef/aiSugestion.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/aiSuggestion-input.png",
+                "url": "img/App Dev/HomeChef/aiSuggestion-input.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/aiSuggestion-output.png",
+                "url": "img/App Dev/HomeChef/aiSuggestion-output.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/groceryList.png",
+                "url": "img/App Dev/HomeChef/groceryList.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/DefaultRecipeList.png",
+                "url": "img/App Dev/HomeChef/DefaultRecipeList.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             },
             {
-                "url": "img/App Dev/HomeChef/suggestionList.png",
+                "url": "img/App Dev/HomeChef/suggestionList.webp",
                 "caption": "",
                 "aspectRatio": "portrait"
             }

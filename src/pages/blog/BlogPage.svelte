@@ -1,6 +1,5 @@
 <script>
     // @ts-nocheck
-
     import CategoryCarousel from "./../../components/CategoryCarousel.svelte";
     import BlogCard from "../../components/BlogCard.svelte";
     import { router } from "./../../router/router.js";
@@ -15,8 +14,6 @@
             fp[cat] = blogData.posts.filter((post) => post.category === cat);
         });
         filteredPosts = fp;
-        // console.log("got blogData:", blogData);
-        // console.log("filteredPosts:", filteredPosts);
     }
 </script>
 
@@ -66,16 +63,14 @@
                                         {blogData.posts[0].excerpt}
                                     </p>
                                 </div>
-                                <!-- svelte-ignore a11y_no_static_element_interactions -->
+
                                 <div>
-                                    <!-- svelte-ignore a11y_click_events_have_key_events -->
-                                    <!-- svelte-ignore a11y_missing_attribute -->
                                     <a
                                         onclick={() => {
                                             navigate(
-                                                `blog/${blogData.posts[0].id}`,
+                                                `blog/${blogData.posts[0].slug}`,
                                             );
-                                        }}
+                                        }} href="#"
                                         class="inline-block bg-purple-700 cursor-pointer text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity"
                                     >
                                         Read Full ->

@@ -48,7 +48,7 @@
   }
 </script>
 
-<div class="pt-10 text-right">
+<div class="pt-10">
   <button
     aria-label="close"
     class="absolute top-4 right-4 bg-gray-900 rounded-full p-2 z-10 hover:bg-gray-700 transition-colors"

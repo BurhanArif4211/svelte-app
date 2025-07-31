@@ -5,6 +5,7 @@
     const { navigate } = router;
 
     export let post: {
+        slug: String;
         id: number;
         title: string;
         excerpt: string;
@@ -20,7 +21,7 @@
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <article
 onclick={()=>{
-    navigate(`blog/${post.id}`)
+    navigate(`blog/${post.slug}`)
 }}
 class="bg-gradient-to-tr from-[#460058] to-[#1b003d] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
     <div class="relative h-48 overflow-hidden">

@@ -38,3 +38,96 @@
 .g-NavBar{
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+/* 
+For Markdown in blog
+*/
+.markdown {
+    @apply  mx-auto ;
+  }
+
+  .markdown h1 {
+    @apply text-4xl font-bold mt-12 mb-6 pb-2 border-b border-gray-200;
+  }
+
+  .markdown h2 {
+    @apply text-3xl font-semibold mt-10 mb-4 pb-2 border-b border-gray-100;
+  }
+
+  .markdown h3 {
+    @apply text-2xl font-semibold mt-8 mb-3;
+  }
+
+  .markdown h4 {
+    @apply text-xl font-medium mt-6 mb-2;
+  }
+
+  .markdown p {
+    @apply my-5 leading-relaxed ;
+  }
+
+  .markdown a {
+    @apply text-[#ae56ff] hover:text-[#911bff] font-medium underline transition-colors;
+  }
+
+  .markdown strong {
+    @apply font-semibold ;
+  }
+
+  .markdown em {
+    @apply italic ;
+  }
+
+  .markdown ul,
+  .markdown ol {
+    @apply my-6 pl-8;
+  }
+
+  .markdown ul {
+    @apply list-disc space-y-2;
+  }
+
+  .markdown ol {
+    @apply list-decimal space-y-2;
+  }
+
+  .markdown li {
+    @apply pl-2 leading-relaxed;
+  }
+
+  .markdown blockquote {
+    @apply border-l-4 border-gray-300 pl-6 py-1 my-6  italic;
+  }
+
+  .markdown code {
+    @apply font-mono text-sm bg-gray-100 rounded px-1.5 py-0.5 text-rose-600;
+  }
+
+  .markdown pre {
+    @apply  rounded-lg p-4 my-6 overflow-x-auto;
+  }
+
+  .markdown pre code {
+    @apply bg-transparent  p-0;
+  }
+
+  .markdown hr {
+    @apply my-10 border-t ;
+  }
+
+  .markdown img {
+    @apply rounded-lg my-6 shadow-lg mx-auto;
+  }
+
+  .markdown table {
+    @apply w-full my-6 border-collapse;
+  }
+
+  .markdown th {
+    @apply  text-left font-semibold p-3 border-b-2 border-gray-300;
+  }
+
+  .markdown td {
+    @apply p-3 border-b border-gray-200 align-top;
+  }

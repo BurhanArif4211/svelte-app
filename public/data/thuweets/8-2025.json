@@ -1,0 +1,17 @@
+{
+  "month": "September 2025",
+  "thuweets": [
+    {
+      "id": "1",
+      "content": "Just launched my new project! Building in public has been an incredible journey.",
+      "date": "2025-09-15T14:30:00Z",
+      "hashtags": ["BuildInPublic", "IndieHacker"]
+    },
+    {
+      "id": "2", 
+      "content": "The key to productivity isn't working more hours, it's working focused hours. Remove distractions, set clear goals, and watch your output soar. poki",
+      "date": "2025-09-12T09:15:00Z",
+      "hashtags": ["Productivity", "Focus"]
+    }
+  ]
+}

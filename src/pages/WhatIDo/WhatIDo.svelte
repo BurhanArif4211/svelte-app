@@ -2,7 +2,7 @@
     export type Project = {
         id: string;
         title: string;
-        type: "web" | "android";
+        type: string;
         description: string;
         images: {
             url: string;
@@ -27,10 +27,13 @@
     let selectedProject: Project | null = null;
     let filteredProj = projects;
     // Filter projects by type
-    let filterState: "all" | "web" | "android" = "all";
+    let filterState = "all";
+    
+    // Get unique project types dynamically
+    $: projectTypes = ["all", ...new Set(projects.map(p => p.type))];
+    
     const filteredProjects = (filter: string) => {
         if (filter === "all") return projects;
-
         return projects.filter((p) => p.type === filter);
     };
 
@@ -52,48 +55,38 @@
             closeDetail();
         }
     };
+    
+    // Format type for display
+    const formatType = (type: string) => {
+        if (type === "all") return "All Projects";
+        return type.charAt(0).toUpperCase() + type.slice(1);
+    };
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<!-- <svelte:window on:keydown={handleKeydown} /> -->
 
 <div class="min-h-screen py-12 px-4 sm:px-6">
     <div class="max-w-7xl mx-auto">
         <!-- Header -->
         <div class="text-center mb-16">
-            <p class="text-xl  max-w-3xl mx-auto">
+            <p class="text-xl  max-w-3xl mx-auto mt-10">
                 Showcase of Projects I have made throughout the years
             </p>
         </div>
 
         <!-- Filters -->
         <div style="" class="filters-tablets flex justify-center mb-10 space-x-4 overflow-x-auto w-full">
-            <button
-                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ml-[10rem] ${filterState === "all" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
-                onclick={() => {
-                    filteredProj=filteredProjects("all");
-                    filterState="all";
+            {#each projectTypes as type}
+                <button
+                    class={` px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${type === 'all' ? 'sm:ml-26 ml-70' : ''} ${filterState === type ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
+                    onclick={() => {
+                        filteredProj = filteredProjects(type);
+                        filterState = type;
                     }}
-            >
-                All Projects
-            </button>
-            <button
-                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${filterState === "web" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
-                onclick={() => {
-                    filteredProj=filteredProjects("web");
-                    filterState="web";
-                    }}
-            >
-                Web Apps
-            </button>
-            <button
-                class={`px-6 py-2 border-[#f6deff90] rounded-full transition-all sm:px-3 sm:py-2 text-nowrap text-base sm:text-base ${filterState === "android" ? "bg-[#8200DB]" : "bg-[#260138] border-[3px] hover:bg-[#7317a0] "}`}
-                onclick={() => {
-                    filteredProj=filteredProjects("android");
-                    filterState="android";
-                    }}
-            >
-                Android Apps
-            </button>
+                >
+                    {formatType(type)}
+                </button>
+            {/each}
         </div>
 
         <!-- Project Grid -->
@@ -103,9 +96,8 @@
                 <!-- svelte-ignore a11y_no_static_element_interactions -->
                 <div
                     class="rounded-xl overflow-hidden shadow-xl hover:shadow-2xl  transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group"
-                    onclick={() => selectProject(project)}
-                >
-                    <Card type="custom" customBg='bg-gradient-to-tr from-[#460058] to-[#1b003d]' size="lg">
+                    onclick={() => selectProject(project)}>
+                    <Card type="custom" customBg='bg-gradient-to-tr from-[#460058] to-[#1b003d]' size="sm">
                         <!-- Project Thumbnail -->
                         <div class="relative h-48 overflow-hidden">
                             {#if project.images[0]}
@@ -119,7 +111,7 @@
                                     class="bg-gray-700 w-full h-full flex items-center justify-center"
                                 >
                                     <div class="text-gray-400 text-4xl">
-                                        {project.type === "web" ? "🌐" : "📱"}
+                                        {project.type}
                                     </div>
                                 </div>
                             {/if}
@@ -131,11 +123,9 @@
                                 </h3>
                                 <div class="flex items-center mt-1">
                                     <span
-                                        class={`px-2 py-1 text-xs rounded-full ${project.type === "web" ? "bg-cyan-700" : "bg-emerald-700"}`}
+                                        class={`px-2 py-1 text-xs rounded-full  text-black bg-[#0dff92]`}
                                     >
-                                        {project.type === "web"
-                                            ? "Web App"
-                                            : "Android App"}
+                                        {project.type}
                                     </span>
                                 </div>
                             </div>
@@ -212,11 +202,9 @@
                             </h2>
                             <div class="flex items-center mt-2">
                                 <span
-                                    class={`px-3 py-1 rounded-full text-sm font-medium ${selectedProject.type === "web" ? "bg-cyan-700" : "bg-emerald-700"}`}
+                                    class={`px-3 py-1 rounded-full text-sm font-medium text-black bg-[#0dff92]`}
                                 >
-                                    {selectedProject.type === "web"
-                                        ? "Web Application"
-                                        : "Android Application"}
+                                    {selectedProject.type}
                                 </span>
                             </div>
                         </div>

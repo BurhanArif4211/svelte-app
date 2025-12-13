@@ -4,7 +4,7 @@
   import { getAllThuweets } from '../services/thuweets.js';
   import ThuweetCard from './ThuweetCard.svelte';
   import { router } from "../router/router.js";
-  export let limit = 3;
+  export let limit = 1;
   export let title = "Latest Thuweets";
   export let showViewAll = true;
   
@@ -58,14 +58,14 @@
   {:else}
     <div class="space-y-4">
       {#each thuweets as thuweet}
-        <ThuweetCard {thuweet} size="compact" />
+        <ThuweetCard {thuweet} />
       {/each}
     </div>
   {/if}
   
   {#if showViewAll && thuweets.length > 0}
     <div class="mt-6 text-center">
-      <a on:click={()=> router.navigate('/thuweets') } class="inline-block text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
+      <a onclick={()=> router.navigate('/thuweets') } class="cursor-pointer inline-block text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
         
         View all thuweets →
       </a>

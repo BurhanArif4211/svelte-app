@@ -1,3 +1,10 @@
+node_modules
+package-lock.json
+backups
+dist
+dist-ssr
+*.local
+Assets
 # Logs
 logs
 *.log
@@ -7,12 +14,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-backups
-dist
-dist-ssr
-*.local
-Assets
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

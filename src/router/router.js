@@ -51,6 +51,8 @@ function createRouter() {
       const path = to.startsWith('/') ? to : `/${to}`;
       history.pushState({}, '', path);
       set(parsePath(path));
+      window.scroll(0,0);
+      
     }
   };
 }

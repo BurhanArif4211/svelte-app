@@ -1,0 +1,17 @@
+{
+  "month": "December 2025",
+  "thuweets": [
+    {
+      "id": "1",
+      "content": "Why aren't there more standard codes for information interchange? Eastern languages and especially right-to-left written languages need a standard character interchange set. UTF is an good, but it is quite difficult to work with other languages.",
+      "date": "2025-12-12T14:30:00Z",
+      "hashtags": ["Language", "Question"]
+    },
+    {
+      "id": "2", 
+      "content": "While it looks good on paper, modern democracy has failed in practice. Powerful entities in a society can easily change the political narrative with propaganda. And in many cases, Most elections can be rigged with power and money. The problem is with superiority, when the superiority is given to a human, greed flows into the system and injustice becomes easy. Shariah Law fixes these issues.",
+      "date": "2025-12-13T09:15:00Z",
+      "hashtags": ["Shariah", "Democracy","Politics"]
+    }
+  ]
+}

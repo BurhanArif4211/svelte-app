@@ -38,8 +38,8 @@
     <ul class="hidden md:flex space-x-8">
       <li
         onclick={() => {
-          navigate("home");
           menuOpen = !menuOpen
+          navigate("home");
         }}
         class="cursor-pointer bg-[#c756ff19] rounded-full px-4 py-2"
       >

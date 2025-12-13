@@ -3,15 +3,15 @@
   "thuweets": [
     {
       "id": "1",
-      "content": "Just launched my new project! Building in public has been an incredible journey.",
+      "content": "Assessing computer science subjects with a paper-based exam is the most unfair thing. How can the complexities of computer science be expressed on a paper? Due to this, the deserving, skilled students are devoided of their Grades.",
       "date": "2025-09-15T14:30:00Z",
-      "hashtags": ["BuildInPublic", "IndieHacker"]
+      "hashtags": ["Reality","Education"]
     },
     {
       "id": "2", 
-      "content": "The key to productivity isn't working more hours, it's working focused hours. Remove distractions, set clear goals, and watch your output soar. poki",
+      "content": "Pre-defined web-stacks are useless; Every application made in the worlds is unique in itself and limiting the development to a few tools leads to unefficient system design. But I guess web is a convoluted place;",
       "date": "2025-09-12T09:15:00Z",
-      "hashtags": ["Productivity", "Focus"]
+      "hashtags": ["Productivity", "HotTake"]
     }
   ]
 }

@@ -64,7 +64,7 @@
           items={[
             "/img/Design/Poster_Winner.webp",
             "/img/App Dev/HomeChef/logo1.png",
-            "/img/blogThumbs/Dost-thumb.webp",
+            "/img/blogThumbs/1.webp",
           ]}
         />
       </div>
@@ -92,6 +92,7 @@
   </div>
 </div>
 
+<!-- Thuweets Section -->
 <LatestThuweets/>
 <!-- Showcase Section -->
 <div
@@ -104,7 +105,7 @@
     <div class="flex flex-col space-y-4">
       <span>Literature</span>
       <div class="">
-        <Slider items={["/img/blogThumbs/Dost-thumb.webp"]} />
+        <Slider items={["/img/blogThumbs/1.webp"]} />
       </div>
       <Button onclick={() => navigate('blog')} variant="primary">
         Read Blog &rarr;

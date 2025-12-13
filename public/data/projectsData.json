@@ -13,12 +13,12 @@
             },
             {
                 "url": "img/App Dev/TalashSearch/flowchart-1.webp",
-                "caption": "login Page",
+                "caption": "Reverse Index Build Process",
                 "aspectRatio": "landscape"
             },
             {
                 "url": "img/App Dev/TalashSearch/ERD.webp",
-                "caption": "login Page",
+                "caption": "Database Structure",
                 "aspectRatio": "landscape"
             }
         ],
@@ -27,7 +27,7 @@
             "LughaatNLP", 
             "TensorFlow", 
             "MySQL",
-            "Web Technologies"
+            "Web"
         ],
         "links": {
             "github": "https://github.com/burhanarif4211/TalashSearch.git"

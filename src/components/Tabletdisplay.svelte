@@ -7,7 +7,7 @@
 <div class="tablets-container">
 {#if DisplayTextOnly}
 {#each items as item }
-    <div class="tablet">
+    <div class="tablet text-[0.9rem]">
         <span>{item}</span>
     </div>
   {/each}

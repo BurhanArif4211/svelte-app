@@ -1,14 +1,25 @@
 {
-    "categories": ["Literature", "Society","Technology"],
+    "categories": ["Literature", "Society", "Technology"],
     "posts": [
+      {
+        "id": 3,
+        "title": "What is the HWSPA Stack?",
+        "slug": "what-is-the-hwspa-stack",
+        "excerpt": "Headless Worpress Single Page Application is a stack that I developed for making custom solutions for specific organizational needs.",
+        "category": "Technology",
+        "date": "2025-12-13",
+        "thumbnail": "/img/blogThumbs/3.webp",
+        "readTime": "10 min",
+        "tags": ["Technology", "Wordpress", "Svelte", "Web Dev"]
+      },
       {
         "id": 2,
         "title": "State Of Life 2025",
         "slug": "state-of-life-2025",
-        "excerpt": "testing will edit later",
+        "excerpt": "",
         "category": "Society",
-        "date": "2023-08-01",
-        "thumbnail": "/img/blogThumbs/SOL2025.jpg",
+        "date": "2025-08-01",
+        "thumbnail": "/img/blogThumbs/2.webp",
         "readTime": "5 min",
         "tags": ["Life", "People", "Pakistan"]
       },
@@ -16,10 +27,10 @@
         "id": 1,
         "title": "دوست، اردو مختسر خاکہ",
         "slug": "character-sketch-dost",
-        "excerpt": "A Sketch i wrote a few years ago. I don't know how i got the idea.",
+        "excerpt": "A Sketch i wrote a few years ago. I don't remember how i got the idea.",
         "category": "Literature",
         "date": "2023-07-30",
-        "thumbnail": "/img/blogThumbs/Dost-thumb.jpg",
+        "thumbnail": "/img/blogThumbs/1.webp",
         "readTime": "3 min",
         "tags": ["Postmodernism", "Fiction", "Philosophy"]
       }

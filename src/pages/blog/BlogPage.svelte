@@ -81,15 +81,6 @@
                     </div>
                 </div>
             {/if}
-
-            <!-- Category Carousels -->
-            {#each blogData.categories as category}
-                <CategoryCarousel
-                    title={category}
-                    posts={filteredPosts[category]}
-                />
-            {/each}
-
             <!-- All Posts Grid -->
             <div class="mt-20">
                 <h2 class="text-3xl font-bold mb-8">All Articles</h2>
@@ -101,6 +92,15 @@
                     {/each}
                 </div>
             </div>
+            <!-- Category Carousels -->
+            {#each blogData.categories as category}
+                <CategoryCarousel
+                    title={category}
+                    posts={filteredPosts[category]}
+                />
+            {/each}
+
+
         </div>
     </section>
 {/if}

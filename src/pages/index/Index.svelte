@@ -3,6 +3,7 @@
   import "./Index.css";
   import Slider from "../../components/Slider.svelte";
   import Button from "../../components/Button.svelte";
+  import LatestThuweets from "../../components/LatestThuweets.svelte";
   import { router } from './../../router/router';
   const { navigate } = router;
   const greetingList = [
@@ -91,6 +92,7 @@
   </div>
 </div>
 
+<LatestThuweets/>
 <!-- Showcase Section -->
 <div
   class="w-full min-h-screen p-8 md:p-[5rem] bg-[#260138] flex items-start justify-center"

@@ -2,11 +2,11 @@
     // @ts-nocheck
     import PopUpHeading from "./../components/PopUpHeading.svelte";
     let socialMediaLinks = [
-        { name: "Instagram",  url: "https://www.instagram.com/iam.burhanarif"},
-        { name: "LinkedIn",   url: "https://www.linkedin.com/in/that-burhan/"},
-        { name: "Github",     url: "https://github.com/burhanarif4211/"},
-        { name: "Youtube",    url: "https://youtube.com/@iam.burhan"},
-        { name: "CodePen",    url: "https://codepen.io/Recon-Master"},
+      { name: "Github",     url: "https://github.com/burhanarif4211/"},
+      { name: "LinkedIn",   url: "https://www.linkedin.com/in/that-burhan/"},
+      { name: "Instagram",  url: "https://www.instagram.com/iam.burhanarif"},
+      { name: "Youtube",    url: "https://youtube.com/@iam.burhan"},
+      // { name: "CodePen",    url: "https://codepen.io/Recon-Master"},
     ];
 </script>
 

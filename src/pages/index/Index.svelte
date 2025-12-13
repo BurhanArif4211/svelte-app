@@ -30,23 +30,23 @@
 
 <!-- Hero Section -->
 <div
-  class="bg-[url('/img/hero-pattren.webp')] h-[100vh] bg-repeat bg-[length:500px] p-10 md:p-[12rem] flex justify-center items-center flex-col"
+  class="bg-[url('/img/hero-pattren.webp')] h-[100vh] bg-repeat bg-[length:500px] p-5 md:p-[12rem] flex justify-center items-center flex-col"
 >
-  <div class="hero backdrop-blur-md rounded-2xl p-6 md:p-8">
-    <div class="headline mb-6">
-      <h1
-        class="text-4xl md:text-[4rem] bg-gradient-to-t from-[#6cffd0] to-[#ffffff] bg-clip-text text-transparent font-extrabold font-sans">
-        {greeting}
-      </h1>
-    </div>
-
-    <div class="cont grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="space-y-4 text-2xl md:text-[3rem] font-light">
+  <div class="hero backdrop-blur-md rounded-2xl p-6 mt-[35%] lg:mt-[10%] md:mt-[30%] md:p-8 ">
+    
+    <div class="cont grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="space-y-4 text-2xl lg:text-3xl font-light">
+        <div class="headline mb-6">
+          <h1
+            class="text-4xl md:text-[4rem] bg-gradient-to-t from-[#6cffd0] to-[#ffffff] bg-clip-text text-transparent font-extrabold font-sans">
+            {greeting}
+          </h1>
+        </div>
         <p>I am <b class="text-[#6cffd0]">Burhan</b></p>
         <p>I love <b class="text-[#6cffd0]">computers</b></p>
         <p>I like to <b class="text-[#6cffd0]">design</b></p>
         <p>I like to <b class="text-[#6cffd0]">program</b></p>
-        <p>I use Arch BTW.</p>
+        <p>I Like <b class="text-[#6cffd0]">Linux </b></p>
         <Button
           onclick={() => navigate('whatido')}
           variant="trablur"
@@ -57,12 +57,12 @@
       </div>
 
       <!-- Hide slider on mobile -->
-      <div class="hidden lg:block">
+      <div class="hidden w-80 lg:block">
         <Slider
           fit={true}
           items={[
             "/img/Design/Poster_Winner.webp",
-            "/img/Design/PakistanPoster2022.webp",
+            "/img/App Dev/HomeChef/logo1.png",
             "/img/blogThumbs/Dost-thumb.webp",
           ]}
         />
@@ -71,7 +71,7 @@
   </div>
 
   <!-- Scroll Indicator -->
-  <div class="text-center mt-8 md:mt-20">
+  <div class="text-center mt-8 block md:hidden md:mt-20">
     <div class="scroll-down inline-block animate-bounce">
       <svg
         class="h-8 w-8"
@@ -96,7 +96,7 @@
   class="w-full min-h-screen p-8 md:p-[5rem] bg-[#260138] flex items-start justify-center"
 >
   <div
-    class="grid grid-cols-1 md:grid-cols-3 gap-8 text-2xl md:text-4xl font-light"
+    class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-2xl md:text-4xl font-light"
   >
     <!-- Literature -->
     <div class="flex flex-col space-y-4">

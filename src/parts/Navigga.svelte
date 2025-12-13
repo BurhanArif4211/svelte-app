@@ -37,7 +37,10 @@
     <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-8">
       <li
-        onclick={() => navigate("home")}
+        onclick={() => {
+          navigate("home");
+          menuOpen = !menuOpen
+        }}
         class="cursor-pointer bg-[#c756ff19] rounded-full px-4 py-2"
       >
         <!-- svelte-ignore a11y_missing_attribute -->
@@ -46,7 +49,9 @@
         </a>
       </li>
       <li
-        onclick={() => navigate("whatido")}
+        onclick={() =>{ navigate("whatido")
+          menuOpen = !menuOpen
+        }}
         class="cursor-pointer bg-[#c756ff19] rounded-full px-4 py-2"
       >
         <a class="text-lg font-medium flex items-center">
@@ -54,7 +59,9 @@
         </a>
       </li>
       <li
-        onclick={() => navigate("blog")}
+        onclick={() => {navigate("blog")
+          menuOpen = !menuOpen
+        }}
         class="cursor-pointer bg-[#c756ff19] rounded-full px-4 py-2"
       >
         <a class="text-lg font-medium flex items-center">

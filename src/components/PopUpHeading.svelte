@@ -18,7 +18,7 @@
     }}
   >
   {#if isInView}
-    <div transition:fly={{ y: ydirection,delay:xdelay, duration: 1000,easing: backOut }} >{text}</div>
+    <div class="font-black" transition:fly={{ y: ydirection,delay:xdelay, duration: 1000,easing: backOut }} >{text}</div>
   {/if}
   </div>
   

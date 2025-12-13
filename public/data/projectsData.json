@@ -1,13 +1,47 @@
 [
     {
-        "id": "pp-1",
+        "id": "pp-0",
+        "title": "Talash Search",
+        "type": "General",
+        "description":
+            "Talash Search is an experiment turned into a useful algorithm which allows fast lookup of large Urdu Datasets.",
+        "images": [
+            {
+                "url": "img/App Dev/TalashSearch/1.webp",
+                "caption": "Main Search Page",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/TalashSearch/flowchart-1.webp",
+                "caption": "login Page",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/TalashSearch/ERD.webp",
+                "caption": "login Page",
+                "aspectRatio": "landscape"
+            }
+        ],
+        "technologies": [
+            "Python", 
+            "LughaatNLP", 
+            "TensorFlow", 
+            "MySQL",
+            "Web Technologies"
+        ],
+        "links": {
+            "github": "https://github.com/burhanarif4211/TalashSearch.git"
+        }
+    },
+    {
+        "id": "pp-2",
         "title": "Travel Partner",
         "type": "web",
         "description":
             "A utility app for people to share rides and increase society's efficiency.",
         "images": [
             {
-                "url": "img/App Dev/travelPartner/login.webp",
+                "url": "img/App Dev/travelPartner/logo1.webp",
                 "caption": "login Page",
                 "aspectRatio": "landscape"
             },
@@ -45,7 +79,7 @@
         }
     },
     {
-        "id": "pp-2",
+        "id": "pp-3",
         "title": "Home Chef AI",
         "type": "android",
         "description": "AI Powered culinery app to allow easy cooking.",

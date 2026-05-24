@@ -308,7 +308,7 @@
                                     <img
                                         src={image.url}
                                         alt={`Screenshot ${i + 1} of ${selectedProject.title}`}
-                                        class={`w-full object-cover transition-transform duration-500 group-hover:scale-102 ${
+                                        class={`w-full object-fit transition-transform duration-500 group-hover:scale-102 ${
                                             image.aspectRatio === "landscape"
                                                 ? "h-56"
                                                 : image.aspectRatio ===
@@ -319,7 +319,7 @@
                                     />
                                     {#if image.caption}
                                         <div
-                                            class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                                            class="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"
                                         >
                                             <p class="text-sm text-gray-200">
                                                 {image.caption}

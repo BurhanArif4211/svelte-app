@@ -1,5 +1,4 @@
 <script>
-    // @ts-nocheck
     import { onMount } from "svelte";
     import { router } from "./router/router.js";
 
@@ -12,6 +11,7 @@
     import BlogPage from "./pages/blog/BlogPage.svelte";
     import BlogPostView from "./pages/blog/BlogPostView.svelte";
     import ThuweetsPage from "./pages/thuweets/ThuweetsPage.svelte";
+    import CV from "./pages/cv/CV.svelte";
     // subscribe to { page, params }
     let page, params;
     router.subscribe((r) => {
@@ -26,7 +26,7 @@
         <Index />
     {:else if page === "whatido"}
         {#if $projectsStore === null}
-            <div class="flex items-center justify-center h-[100vh]">
+            <div class="flex items-center justify-center h-screen">
                 <div class="">Loading...</div>
             </div>
         {:else}
@@ -35,15 +35,17 @@
     {:else if page === "blog"}
         <BlogPage />
     {:else if page === "design"}
-        <div class="h-[100vh] flex justify-center items-center">
+        <div class="h-screen flex justify-center items-center">
             <div class="text-3xl text-green-300">Under Construction</div>
         </div>
     {:else if page === "post"}
         <BlogPostView parameter={!Number(params.parameter) ? params.parameter : Number(params.parameter)} />
     {:else if page === "thuweets"}
         <ThuweetsPage/>
+    {:else if page === "cv"}
+        <CV/>
     {:else}
-        <div class="h-[100vh] flex justify-center items-center">
+        <div class="h-screen flex justify-center items-center">
             <div class="text-red-300 text-2xl">Not Found</div>
         </div>
     {/if}

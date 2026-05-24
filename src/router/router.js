@@ -27,6 +27,8 @@ function parsePath(pathname) {
       return { page: 'design', params: {} };
     case '/thuweets':
       return { page:'thuweets', params: {} };
+    case '/cv':
+      return { page:'cv', params: {} };
     default:
       return { page: 'notfound', params: {} };
   }

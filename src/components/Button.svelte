@@ -13,6 +13,7 @@
   export let customColor: string = '';
   export let disabled: boolean = false;
   export let onclick;
+  export let Class=''; 
   // Size classes
   const sizeClasses: Record<string, string> = {
     sm: 'px-3 py-1 text-sm',
@@ -35,7 +36,7 @@
       ? customColor
       : variantClasses[variant] ?? variantClasses.primary;
   $: disabledClass = disabled ? 'opacity-50 cursor-not-allowed' : '';
-  $: classes = [baseClasses, sizeClass, variantClass, disabledClass].join(' ');
+  $: classes = [baseClasses, sizeClass, variantClass, disabledClass,Class].join(' ');
 </script>
 
 <button onclick={onclick} class={classes} {disabled}>

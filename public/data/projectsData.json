@@ -211,12 +211,12 @@
         "description": "Wallpaper to color scheme synchronizer for hyprland.",
         "images": [
             {
-                "url": "public/img/App Dev/CyncD/1.webp",
+                "url": "img/App Dev/CyncD/1.webp",
                 "caption": "",
                 "aspectRatio": "landscape"
             },
             {
-                "url": "public/img/App Dev/CyncD/2.webp",
+                "url": "img/App Dev/CyncD/2.webp",
                 "caption": "",
                 "aspectRatio": "landscape"
             }

@@ -34,6 +34,34 @@
         }
     },
     {
+        "id": "pp-1",
+        "title": "Rafta",
+        "type": "Desktop App",
+        "description": "A snappy note taking + todo app that syncs over LAN on multiple devices.",
+        "images": [
+            {
+                "url": "img/App Dev/rafta/1.webp",
+                "caption": "",
+                "aspectRatio": "portrait"
+            },
+                {
+                "url": "img/App Dev/rafta/2.webp",
+                "caption": "",
+                "aspectRatio": "portrait"
+            }
+           
+        ],
+        "technologies": [
+            "golang",
+            "fyne",
+            "gomobile",
+            "sqlite"        
+        ],
+        "links": {
+            "github": "https://github.com/BurhanArif4211/rafta"
+        }
+    },
+    {
         "id": "pp-2",
         "title": "Travel Partner",
         "type": "web",
@@ -139,6 +167,68 @@
         ],
         "links": {
             "github": "https://github.com/BurhanArif4211/HomeChefAI-MobileApp"
+        }
+    }
+    ,
+    {
+        "id": "pp-4",
+        "title": "peeker",
+        "type": "General",
+        "description": "A discord bot which allows to track prices of products and services on the internet.",
+        "images": [
+            {
+                "url": "img/App Dev/peeker/1.webp",
+                "caption": "",
+                "aspectRatio": "portrait"
+            },
+                {
+                "url": "img/App Dev/peeker/2.webp",
+                "caption": "",
+                "aspectRatio": "landscape"
+            },
+                {
+                "url": "img/App Dev/peeker/3.webp",
+                "caption": "",
+                "aspectRatio": "landscape"
+            }
+           
+        ],
+        "technologies": [
+            "javascript",
+            "discord js",
+            "cron js",
+            "sqlite"        
+        ],
+        "links": {
+            "github": "https://github.com/BurhanArif4211/peeker"
+        }
+    }
+    ,
+    {
+        "id": "pp-5",
+        "title": "CyncD",
+        "type": "Linux",
+        "description": "Wallpaper to color scheme synchronizer for hyprland.",
+        "images": [
+            {
+                "url": "public/img/App Dev/CyncD/1.webp",
+                "caption": "",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "public/img/App Dev/CyncD/2.webp",
+                "caption": "",
+                "aspectRatio": "landscape"
+            }
+           
+        ],
+        "technologies": [
+            "golang",
+            "lucasb-eyer/go-colorful",
+            "EdlinOrg/prominentcolor"
+        ],
+        "links": {
+            "github": "https://github.com/BurhanArif4211/cyncd"
         }
     }
 ]

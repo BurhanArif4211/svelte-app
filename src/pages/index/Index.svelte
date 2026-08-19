@@ -114,55 +114,10 @@
   </div>
 </div>
 <!-- Showcase Section -->
-<div
-  class="w-full min-h-screen p-8 md:p-20 bg-[#260138] flex items-start justify-center"
->
-  <div
-    class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-2xl md:text-4xl font-light"
-  >
-    <!-- Literature -->
-    <div class="flex flex-col space-y-4">
-      <span>Literature</span>
-      <div class="">
-        <Slider items={["/img/blogThumbs/1.webp"]} />
-      </div>
-      <Button onclick={() => navigate("blog")} variant="primary">
-        Read Blog &rarr;
-      </Button>
-    </div>
-
-    <!-- Programming / Dev -->
-    <div class="flex flex-col space-y-4">
-      <span>Programming / Dev</span>
-      <div class="">
-        <Slider
-          items={[
-            "/img/App Dev/HomeChef/logo1.png",
-            "/img/App Dev/travelPartner/logo1.webp",
-          ]}
-        />
-      </div>
-      <Button onclick={() => navigate("whatido")} variant="primary">
-        View Projects &rarr;
-      </Button>
-    </div>
-
-    <!-- Design -->
-    <div class="flex flex-col space-y-4">
-      <span>Design</span>
-      <div class="">
-        <Slider
-          items={[
-            "img/Design/playingCard.webp",
-            "img/Design/fearless_gun_thumb.webp",
-            "img/Design/electric_gun_thumb.webp",
-          ]}
-        />
-      </div>
-      <Button onclick={() => navigate("design")} variant="primary">
-        View &rarr;
-      </Button>
-    </div>
+<div class="w-full min-h-screen p-8 md:p-20 bg-[#260138] flex items-start justify-center">
+  <div class="grid grid-cols-1 gap-8 text-2xl md:text-4xl font-light">
+Requion | Security-focused software agency
+<a class="text-3xl text-white" href="https://requion.vercel.app/" target="_blank">Visit Website</a>
   </div>
 </div>
 <!-- Thuweets Section -->

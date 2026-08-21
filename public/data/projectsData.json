@@ -1,112 +1,39 @@
 [
-    {
-        "id": "pp-0",
-        "title": "Talash Search",
-        "type": "General",
-        "description":
-            "Talash Search is an experiment turned into a useful algorithm which allows fast lookup of large Urdu Datasets.",
+{
+        "id": "pp-7",
+        "title": "SOC In A Bot",
+        "type": "Security",
+        "description": "An LLM powered Discord bot that enriches SIEM alert data with additional insights and mitigation guides. ",
         "images": [
             {
-                "url": "img/App Dev/TalashSearch/1.webp",
-                "caption": "Main Search Page",
-                "aspectRatio": "landscape"
+                "url": "img/App Dev/soc-in-a-bot/1.webp",
+                "caption": "Nmap scan detected and reported on discord",
+                "aspectRatio": "square"
+            },
+						{
+                "url": "img/App Dev/soc-in-a-bot/2.webp",
+                "caption": "CVE payload detected and reported fast",
+                "aspectRatio": "square"
             },
             {
-                "url": "img/App Dev/TalashSearch/flowchart-1.webp",
-                "caption": "Reverse Index Build Process",
-                "aspectRatio": "landscape"
-            },
-            {
-                "url": "img/App Dev/TalashSearch/ERD.webp",
-                "caption": "Database Structure",
+                "url": "img/App Dev/soc-in-a-bot/3.webp",
+                "caption": "Suricata logs on EveBox web UI",
                 "aspectRatio": "landscape"
             }
         ],
         "technologies": [
-            "Python", 
-            "LughaatNLP", 
-            "TensorFlow", 
-            "MySQL",
-            "Web"
+            "Golang",
+            "Discord.js",
+            "Suricata",
+            "SQLite",
+            "Openrouter.ai"
         ],
         "links": {
-            "github": "https://github.com/burhanarif4211/TalashSearch.git"
+            "github": "https://github.com/BurhanArif4211/soc-in-a-bot"
         }
     },
-    {
-        "id": "pp-1",
-        "title": "Rafta",
-        "type": "Desktop App",
-        "description": "A snappy note taking + todo app that syncs over LAN on multiple devices.",
-        "images": [
-            {
-                "url": "img/App Dev/rafta/1.webp",
-                "caption": "",
-                "aspectRatio": "portrait"
-            },
-                {
-                "url": "img/App Dev/rafta/2.webp",
-                "caption": "",
-                "aspectRatio": "portrait"
-            }
-           
-        ],
-        "technologies": [
-            "golang",
-            "fyne",
-            "gomobile",
-            "sqlite"        
-        ],
-        "links": {
-            "github": "https://github.com/BurhanArif4211/rafta"
-        }
-    },
-    {
-        "id": "pp-2",
-        "title": "Travel Partner",
-        "type": "web",
-        "description":
-            "A utility app for people to share rides and increase society's efficiency.",
-        "images": [
-            {
-                "url": "img/App Dev/travelPartner/logo1.webp",
-                "caption": "login Page",
-                "aspectRatio": "landscape"
-            },
-            {
-                "url": "img/App Dev/travelPartner/Dashboard-addRoute.webp",
-                "caption": "add a route on the dashboard",
-                "aspectRatio": "landscape"
-            },
-            {
-                "url": "img/App Dev/travelPartner/Dashboard.webp",
-                "caption": "dashboard of the app",
-                "aspectRatio": "landscape"
-            },
-            {
-                "url": "img/App Dev/travelPartner/Dashboard-connect.webp",
-                "caption": "connection requests on the home page",
-                "aspectRatio": "landscape"
-            },
-            {
-                "url": "img/App Dev/travelPartner/Dashboard-connected.webp",
-                "caption": "connected view on the dashboard",
-                "aspectRatio": "landscape"
-            }
-        ],
-        "technologies": [
-            "Java", 
-            "Javalin", 
-            "SQLite", 
-            "JWT", 
-            "HTMX", 
-            "Web"
-        ],
-        "links": {
-            "github": "https://github.com/burhanarif4211/TravelPartner.git"
-        }
-    },
-    {
+
+	{
         "id": "pp-3",
         "title": "Home Chef AI",
         "type": "android",
@@ -168,8 +95,36 @@
         "links": {
             "github": "https://github.com/BurhanArif4211/HomeChefAI-MobileApp"
         }
-    }
-    ,
+    },
+
+        {
+        "id": "pp-1",
+        "title": "Rafta",
+        "type": "Desktop App",
+        "description": "A snappy note taking + todo app that syncs over LAN on multiple devices.",
+        "images": [
+            {
+                "url": "img/App Dev/rafta/1.webp",
+                "caption": "",
+                "aspectRatio": "portrait"
+            },
+                {
+                "url": "img/App Dev/rafta/2.webp",
+                "caption": "",
+                "aspectRatio": "portrait"
+            }
+           
+        ],
+        "technologies": [
+            "golang",
+            "fyne",
+            "gomobile",
+            "sqlite"        
+        ],
+        "links": {
+            "github": "https://github.com/BurhanArif4211/rafta"
+        }
+    },
     {
         "id": "pp-4",
         "title": "peeker",
@@ -202,8 +157,86 @@
         "links": {
             "github": "https://github.com/BurhanArif4211/peeker"
         }
-    }
-    ,
+    },
+		    {
+        "id": "pp-2",
+        "title": "Travel Partner",
+        "type": "web",
+        "description":
+            "A utility app for people to share rides and increase society's efficiency.",
+        "images": [
+            {
+                "url": "img/App Dev/travelPartner/logo1.webp",
+                "caption": "login Page",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/travelPartner/Dashboard-addRoute.webp",
+                "caption": "add a route on the dashboard",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/travelPartner/Dashboard.webp",
+                "caption": "dashboard of the app",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/travelPartner/Dashboard-connect.webp",
+                "caption": "connection requests on the home page",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/travelPartner/Dashboard-connected.webp",
+                "caption": "connected view on the dashboard",
+                "aspectRatio": "landscape"
+            }
+        ],
+        "technologies": [
+            "Java", 
+            "Javalin", 
+            "SQLite", 
+            "JWT", 
+            "HTMX", 
+            "Web"
+        ],
+        "links": {
+            "github": "https://github.com/burhanarif4211/TravelPartner.git"
+        }
+    },
+		{
+        "id": "pp-0",
+        "title": "Talash Search",
+        "type": "General",
+        "description":
+            "Talash Search is an experiment turned into a useful algorithm which allows fast lookup of large Urdu Datasets.",
+        "images": [
+            {
+                "url": "img/App Dev/TalashSearch/1.webp",
+                "caption": "Main Search Page",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/TalashSearch/flowchart-1.webp",
+                "caption": "Reverse Index Build Process",
+                "aspectRatio": "landscape"
+            },
+            {
+                "url": "img/App Dev/TalashSearch/ERD.webp",
+                "caption": "Database Structure",
+                "aspectRatio": "landscape"
+            }
+        ],
+        "technologies": [
+            "Python", 
+            "LughaatNLP", 
+            "TensorFlow", 
+            "MySQL",
+            "Web"
+        ],
+        "links": {
+            "github": "https://github.com/burhanarif4211/TalashSearch.git"
+        }
+    },
     {
         "id": "pp-5",
         "title": "CyncD",

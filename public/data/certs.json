@@ -1,0 +1,18 @@
+ [
+    {
+      "id": "isc2-cc",
+      "name": "ISC2 Certified in Cybersecurity (CC)",
+      "issuer": "ISC2",
+      "date": "2026",
+      "image": "/img/certs/ISC2-CC.png",
+      "description": "Entry-level cybersecurity certification covering security principles, incident response, and access controls."
+    },
+    {
+      "id": "google-cybersecurity",
+      "name": "Google Cybersecurity Professional Certificate",
+      "issuer": "Google",
+      "date": "2026",
+      "image": "/img/certs/google-cyber.webp",
+      "description": "Comprehensive program covering network security, incident response, Linux, Python, and SIEM tools."
+    }
+  ]
